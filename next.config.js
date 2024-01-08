@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
+const { env } = require("process");
 const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    appDir: true,
-    runtime: "experimental-edge",
+  compiler: {
+    removeConsole: env.NODE_ENV === "production" ? true : false,
   },
-}
+  swcMinify: true,
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
