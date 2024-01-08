@@ -3,7 +3,27 @@
 
 
 
+import { useEffect, useState } from 'react';
 
+export const useBrowserDetect = () => {
+  const [browser, setBrowser] = useState('');
+
+  useEffect(() => {
+    const userAgent = window.navigator.userAgent;
+    if (userAgent.includes('Chrome') && !userAgent.includes('Edg')) {
+      console.log('Tarayıcı: Chrome');
+      setBrowser('Chrome');
+    } else if (userAgent.includes('Safari') && !userAgent.includes('Chrome')) {
+      console.log('Tarayıcı: Safari');
+      setBrowser('Safari');
+    } else {
+      console.log('Tarayıcı: Diğer');
+      setBrowser('Diğer');
+    }
+  }, []);
+
+  return browser;
+};
 
 export function getOS() {
 	// @ts-ignore

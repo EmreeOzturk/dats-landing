@@ -1,10 +1,11 @@
-import { getOS } from "@/helpers/helpers";
+import { getOS, useBrowserDetect } from "@/helpers/helpers";
 import { useEffect, useRef, useState } from "react";
 
 export default function Banner() {
   const videoRef: any = useRef(null);
   const [showVideo, setShowVideo] = useState(false);
   const os = getOS();
+  const browser = useBrowserDetect();
   console.log(os);
 
   useEffect(() => {
@@ -45,7 +46,7 @@ export default function Banner() {
         Resource (PoR) smart contract, fortifying Web3 & Web2 against intricate
         cyber threats.
       </h4>
-      {os === "MacOS" || os === "iOS" ? (
+      {browser !== "Chrome" ? (
         <div
           className={`absolute transform transition-all -bottom-[20vh] md:-bottom-[20vh] lg:-bottom-[28vh]  min-h-screen w-[90vw] xl:w-[55vw] xl:scale-110 mx-auto animate__animated animate__fadeIn animate__faster`}
         >
