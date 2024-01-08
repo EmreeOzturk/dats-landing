@@ -44,7 +44,7 @@ ingress:
   enabled: true
   className: "traefik"
   hosts:
-  - host: www2.datsproject.io
+  - host: www.datsproject.io
     paths:
     - path: /
       pathType: ImplementationSpecific
