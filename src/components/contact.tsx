@@ -62,15 +62,15 @@ export default function Contact() {
               onSubmit={handleSubmit}
               className="grid md:grid-cols-2 text-white gap-4 xl:gap-10  "
             >
-              <InputText id="standard-name" label="Name*" name="name" />
+              <InputText id="standard-name" label="Name" name="name" />
               <InputText
                 id="standard-disabled"
-                label="Surname*"
+                label="Surname"
                 name="surname"
               />
               <InputText
                 id="standard-email"
-                label="Email*"
+                label="Email"
                 type="email"
                 name="email"
               />
@@ -107,6 +107,7 @@ export default function Contact() {
                 className="col-span-full"
                 placeholder="Briefly tell us about your project. How  can we help you?"
                 multiline
+                required
                 name="message"
                 variant="standard"
                 rows={2}
