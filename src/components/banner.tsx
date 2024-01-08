@@ -4,11 +4,13 @@ import { useEffect, useRef, useState } from "react";
 export default function Banner() {
   const videoRef: any = useRef(null);
   const [showVideo, setShowVideo] = useState(false);
-  const os = getOS();
-  const browser = useBrowserDetect();
+  const [os, setOs] = useState("Windows"); //["Windows", "MacOS", "iOS", "Android", "Linux"
+  const [browser, setBrowser] = useState("Chrome"); //["Chrome", "Safari", "Diğer"]
   console.log(os);
 
   useEffect(() => {
+    setBrowser(useBrowserDetect());
+    setOs(getOS());
     let lastScrollPosition = 100;
     if (typeof window === "undefined") return;
     if (!videoRef.current) return;
