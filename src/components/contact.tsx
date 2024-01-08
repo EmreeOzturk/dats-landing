@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Resend } from "resend";
-import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
@@ -8,9 +6,6 @@ import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import Link from "next/link";
 import axios from "axios";
-import { render } from "@react-email/render";
-import { sendEmail } from "@/lib/email";
-import ContactEmail from "@/pages/email/contactEmail";
 
 export default function Contact() {
   const [related, setRelated] = useState("");
