@@ -1,2 +1,10 @@
 node_modules
 .next
+.dockerignore
+.github/workflows
+.git/
+.github/
+.gitignore
+.gitattributes
+helm/
+Dockerfile
