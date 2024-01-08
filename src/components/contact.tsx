@@ -151,7 +151,7 @@ export default function Contact() {
               <span
                 className={`col-span-full text-xs ${
                   message.status ? "text-green-500" : "text-red-500"
-                } -mt-4`}
+                } xl:-mt-4`}
               >
                 {message.text}
               </span>
@@ -171,7 +171,8 @@ export default function Contact() {
             </h3>
             <div className="flex flex-wrap text-neutral-50 text-sm">
               <div className="mb-4 gap-5 flex flex-wrap items-center justify-center md:justify-start">
-                <Link className="hover:text-orange-400 transition-colors"
+                <Link
+                  className="hover:text-orange-400 transition-colors"
                   href={"https://twitter.com/DatsProject"}
                   target={"_Blank"}
                 >
@@ -187,7 +188,11 @@ export default function Contact() {
                     />
                   </svg>
                 </Link>
-                <Link className="hover:text-orange-400 transition-colors" href={"mailto:hello@datsproject.io"} target={"_Blank"}>
+                <Link
+                  className="hover:text-orange-400 transition-colors"
+                  href={"mailto:hello@datsproject.io"}
+                  target={"_Blank"}
+                >
                   <svg
                     className="w-6 md:w-9 h-fit"
                     viewBox="0 0 35 35"
@@ -200,7 +205,8 @@ export default function Contact() {
                     />
                   </svg>
                 </Link>
-                <Link className="hover:text-orange-400 transition-colors"
+                <Link
+                  className="hover:text-orange-400 transition-colors"
                   href={"https://t.me/datsprojectofficial"}
                   target={"_Blank"}
                 >
@@ -225,7 +231,11 @@ export default function Contact() {
                     </defs>
                   </svg>
                 </Link>
-                <Link className="hover:text-orange-400 transition-colors" href={"https://github.com/datsproject"} target={"_Blank"}>
+                <Link
+                  className="hover:text-orange-400 transition-colors"
+                  href={"https://github.com/datsproject"}
+                  target={"_Blank"}
+                >
                   <svg
                     className="w-6 md:w-9 h-fit"
                     viewBox="0 0 35 35"
@@ -245,7 +255,8 @@ export default function Contact() {
                     </defs>
                   </svg>
                 </Link>
-                <Link className="hover:text-orange-400 transition-colors"
+                <Link
+                  className="hover:text-orange-400 transition-colors"
                   href={"https://medium.com/@dats_project"}
                   target={"_Blank"}
                 >
@@ -261,7 +272,8 @@ export default function Contact() {
                     />
                   </svg>
                 </Link>
-                <Link className="hover:text-orange-400 transition-colors"
+                <Link
+                  className="hover:text-orange-400 transition-colors"
                   href={"https://www.linkedin.com/company/dats-project/"}
                   target={"_Blank"}
                 >
@@ -277,7 +289,8 @@ export default function Contact() {
                     />
                   </svg>
                 </Link>
-                <Link className="hover:text-orange-400 transition-colors"
+                <Link
+                  className="hover:text-orange-400 transition-colors"
                   href={"https://discord.com/invite/QZfJhsJY9J"}
                   target={"_Blank"}
                 >
@@ -355,20 +368,24 @@ function InputText({
   );
 }
 const realtedUnits = [
-  { id: "0", title: "General", to: "info@datsproject.io" },
+  {
+    id: "0",
+    title: "General",
+    to: process.env.NEXT_PUBLIC_GENERAL || "abidinayhan94@gmail.com",
+  },
   {
     id: "1",
     title: "Partnership",
-    to: "partners@datsproject.io",
+    to: process.env.NEXT_PUBLIC_PARTNERSHIP || "abidinayhan94@gmail.com",
   },
   {
     id: "2",
     title: "Job Opportunities",
-    to: "jobs@datsproject.io",
+    to: process.env.NEXT_PUBLIC_JOBOPP || "abidinayhan94@gmail.com",
   },
   {
     id: "3",
     title: "Marketing",
-    to: "marketing@datsproject.io",
+    to: process.env.NEXT_PUBLIC_MARKETING || "abidinayhan94@gmail.com",
   },
 ];
