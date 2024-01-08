@@ -8,6 +8,8 @@ export default function Banner() {
     if (typeof window === "undefined") return;
     if (!videoRef.current) return;
     const video: any = videoRef.current;
+    //play
+    video.play();
     //hızı buradan ayarlıyorsun 1 normal 0.5 yavaş 2 hızlı
     video.playbackRate = 1;
     const handleScroll = () => {
@@ -47,6 +49,7 @@ export default function Banner() {
         autoPlay
         loop
         muted
+        playsInline
         data-loaded="true"
         id="video"
       >
