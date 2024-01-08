@@ -55,6 +55,11 @@ export default function Banner() {
       >
         {/* earth2.webm */}
         <source src="/attack05.webm" type="video/webm" />
+        <img
+          src="/images/earth_3d.png" className="w-full h-full"
+          alt="Video oynatılamıyorsa gösterilecek resim"
+        ></img>
+        Your browser does not support the video tag.
       </video>
       {/* <video
         ref={videoRef}
