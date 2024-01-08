@@ -46,17 +46,7 @@ export default function Banner() {
         Resource (PoR) smart contract, fortifying Web3 & Web2 against intricate
         cyber threats.
       </h4>
-      {browser !== "Chrome" ? (
-        <div
-          className={`absolute transform transition-all -bottom-[20vh] md:-bottom-[20vh] lg:-bottom-[28vh]  min-h-screen w-[90vw] xl:w-[55vw] xl:scale-110 mx-auto animate__animated animate__fadeIn animate__faster`}
-        >
-          <img
-            src="/images/earth_3d.png"
-            className="w-full h-full"
-            alt="Video oynatılamıyorsa gösterilecek resim"
-          ></img>
-        </div>
-      ) : (
+      {browser === "Chrome" || (os !== "iOS" && os !== "MacOS") ? (
         <video
           ref={videoRef}
           className={`absolute transform transition-all -bottom-[15vh] md:-bottom-[20vh] lg:-bottom-[28vh]  min-h-screen w-[100vw] md:w-[60vw] xl:w-[55vw] scale-150 md:scale-110 xl:scale-110 mx-auto animate__animated animate__fadeIn animate__faster ${
@@ -78,6 +68,16 @@ export default function Banner() {
           ></img>
           Your browser does not support the video tag.
         </video>
+      ) : (
+        <div
+          className={`absolute transform transition-all -bottom-[20vh] md:-bottom-[20vh] lg:-bottom-[28vh]  min-h-screen w-[90vw] xl:w-[55vw] xl:scale-110 mx-auto animate__animated animate__fadeIn animate__faster`}
+        >
+          <img
+            src="/images/earth_3d.png"
+            className="w-full h-full"
+            alt="Video oynatılamıyorsa gösterilecek resim"
+          ></img>
+        </div>
       )}
       {/* <video
         ref={videoRef}
