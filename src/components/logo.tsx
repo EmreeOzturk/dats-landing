@@ -4,7 +4,7 @@ export default function Logo() {
   return (
     <button className="max-w-[170px] md:max-w-xs flex gap-3 items-center ">
       <svg
-        className="w-fit h-10 md:h-14"
+        className="w-auto md:w-fit h-10 md:h-14"
         viewBox="0 0 450 499"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +19,7 @@ export default function Logo() {
         width={874}
         height={182}
         alt=""
-        className="h-2/3 -mb-2 w-fit"
+        className="h-2/3 -mb-2 w-auto md:w-fit"
       />
     </button>
   );
