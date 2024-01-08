@@ -8,11 +8,11 @@ export default function About() {
     >
       <div className="h-full flex flex-col items-center justify-center gap-6 w-full md:w-2/3 ">
         <div className="w-full">
-          <h2 className="text-[45px] pb-10 text-left w-full ">
+          <h2 className="text-xl md:text-[45px] pb-10 text-left w-full ">
             Cyber Security Innovation with DePIN
           </h2>
 
-          <p className="text-base">
+          <p className="text-sm md:text-base">
             The DATS Project addresses a crucial need in the market by
             pioneering the #DePIN category, specifically targeting Web3
             security. Our innovative desktop application enables individuals to
