@@ -10,4 +10,7 @@ COPY . .
 
 RUN npm run build
 
+COPY .env .env
+RUN chmod 400 .env
+
 CMD ["npm", "start"]
