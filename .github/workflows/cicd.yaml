@@ -47,4 +47,9 @@ jobs:
         kubectl cluster-info
 
         # deploy k8s
-        helm upgrade --install datsproject-io ./helm --set image.repository=${{ secrets.NEXUS_URL }}/datsproject-io --set image.tag=v${{ github.run_number }} --namespace default --wait --kubeconfig=$KUBECONFIG
+        helm upgrade --install datsproject-io ./helm \
+        --set image.repository=${{ secrets.NEXUS_URL }}/datsproject-io \
+        --set nexusCredentials.username=${{ secrets.NEXUS_USERNAME }} \
+        --set nexusCredentials.password=${{ secrets.NEXUS_PASSWORD }} \
+        --set image.tag=v${{ github.run_number }} \
+        --namespace default --wait --kubeconfig=$KUBECONFIG
