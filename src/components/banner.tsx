@@ -62,7 +62,7 @@ export default function Banner() {
           id="video"
         >
           {/* earth2.webm */}
-          <source src="/attack05.webm" type="video/webm" />
+          <source src="/attack06.webm" type="video/webm" />
           <img
             src="/images/earth_3d.png"
             className="w-full h-full"

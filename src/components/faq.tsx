@@ -74,7 +74,7 @@ function CardFaq({ faq, togglePara, active }: any) {
           duration={300}
           height={active === faq.id.toString() ? "auto" : 0}
         >
-          <div className="flex flex-col gap-2 p-4 text-white-dark text-xs md:text-sm font-normal md:font-medium border-t border-[#d3d3d3]/50 ">
+          <div className="flex flex-col gap-2 p-4 text-white-dark text-[10px] md:text-sm font-normal md:font-medium border-t border-[#d3d3d3]/50 ">
             <span>{faq.answer}</span>
           </div>
         </AnimateHeight>

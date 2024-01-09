@@ -70,7 +70,9 @@ export default function Services() {
                     <h4 className="	text-left font-semibold text-lg h-12 md:h-16">
                       {service.title}
                     </h4>
-                    <p className=" text-sm text-left">{service.description}</p>
+                    <p className=" text-[12px] text-left">
+                      {service.description}
+                    </p>
                   </div>
                 </div>
               </SwiperSlide>
