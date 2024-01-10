@@ -17,42 +17,8 @@ export default function Services() {
           eliminating the need for upfront investment costs.
         </h4>
       </div>
-      <div className="w-full flex ">
+      <div className="w-full slider pt-0 justify-center items-center flex services">
         <SwiperComp>
-          <Swiper
-            slidesPerView={1}
-            spaceBetween={10}
-            centeredSlides={false}
-            slidesPerGroupSkip={1}
-            grabCursor={true}
-            /* pagination={{
-            clickable: true,
-          }} */
-            breakpoints={{
-              0: {
-                slidesPerView: 1.2,
-                spaceBetween: 20,
-              },
-              640: {
-                slidesPerView: 1.9,
-                spaceBetween: 20,
-              },
-              748: {
-                slidesPerView: 2.1,
-                spaceBetween: 20,
-              },
-              1200: {
-                slidesPerView: 2.8,
-                spaceBetween: 20,
-              },
-              1500: {
-                slidesPerView: 4,
-                spaceBetween: 30,
-              },
-            }}
-            /*  modules={[Pagination]} */
-            className=" !pb-10 !px-3"
-          >
             {services.map((service) => (
               <SwiperSlide key={service.id}>
                 <div className="flex flex-col items-start text-left justify-start pb-4 md:pb-6 pt-2 gap-3 card-bg border border-white/20 rounded-xl h-full px-3 md:px-5">
@@ -66,8 +32,8 @@ export default function Services() {
                     />
                   </div>
 
-                  <div className="min-h-[200px] md:min-h-[272px] h-fit">
-                    <h4 className="	text-left font-semibold text-lg h-12 md:h-16">
+                  <div className="min-h-[250px] md:min-h-[272px] h-fit">
+                    <h4 className="	text-left font-semibold text-lg h-16">
                       {service.title}
                     </h4>
                     <p className=" text-sm text-left">{service.description}</p>
@@ -75,7 +41,6 @@ export default function Services() {
                 </div>
               </SwiperSlide>
             ))}
-          </Swiper>
         </SwiperComp>
       </div>
     </div>

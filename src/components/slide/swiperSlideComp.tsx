@@ -42,7 +42,7 @@ export default function SwiperComp({ children}: { children: React.ReactNode}) {
         clickable: true,
       }}
       modules={[Navigation, Pagination]}
-      className="!pb-12 md:!pb-16 !px-3 slider"
+      className="!pb-14 md:!pb-16 !px-3 slider "
     >
         {children}
     </Swiper>
