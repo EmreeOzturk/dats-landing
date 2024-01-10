@@ -25,7 +25,7 @@
   }
   
   p {
-    @apply text-[10px] md:text-base text-white font-normal font-FiraCode;
+    @apply text-[10px] md:text-base text-white font-normal font-FiraCode ;
   }
   .slider {
     @apply !relative;
