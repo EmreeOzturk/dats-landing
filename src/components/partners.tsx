@@ -16,7 +16,7 @@ export default function Partners() {
               className="w-fit flex justify-center"
             >*/
             <Image
-              className="opacity-70 w-20 md:w-32 2xl:w-48 h-fit hover:opacity-100 md:saturate-0 hover:saturate-100"
+              className="opacity-70 w-24 md:w-32 2xl:w-48 h-fit hover:opacity-100 md:saturate-0 hover:saturate-100"
               src={item.src}
               alt={`Partner Logo ${index + 1}`}
               width={200}

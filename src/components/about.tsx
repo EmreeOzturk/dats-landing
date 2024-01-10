@@ -4,15 +4,15 @@ export default function About() {
   return (
     <div
       id="about"
-      className=" w-full flex-col flex md:flex-row gap-6 md:gap-10 border border-white/20 card-bg -mt-60 rounded-2xl  py-10 md:py-20 px-6 md:px-12 items-center"
+      className=" w-full flex-col flex md:flex-row gap-6 md:gap-10 border border-white/20 card-bg -mt-60 rounded-2xl py-6 md:py-10 md:py-20 px-6 md:px-12 items-center"
     >
       <div className="h-full flex flex-col items-center justify-center gap-6 w-full md:w-2/3 ">
         <div className="w-full">
-          <h2 className="text-xl md:text-[45px] pb-10 text-left w-full ">
+          <h2 className="text-xl md:text-[45px] pb-6 md:pb-10 text-left w-full ">
             Cyber Security Innovation with DePIN
           </h2>
 
-          <p className="text-sm md:text-base">
+          <p className="text-xs sm:text-sm md:text-base font-normal">
             The DATS Project addresses a crucial need in the market by
             pioneering the #DePIN category, specifically targeting Web3
             security. Our innovative desktop application enables individuals to

@@ -11,11 +11,11 @@ export default function Services() {
     >
       <div className="flex flex-col gap-3 md:gap-6 items-center justify-center w-full md:w-2/3">
         <h2>Our Services</h2>
-        <h4 className="text-center">
+        <p className="text-center text-xs sm:text-sm md:text-base">
           DATS Project enables the utilization of high computing power across
           the following cybersecurity services, all on a pay-as-you-go basis,
           eliminating the need for upfront investment costs.
-        </h4>
+        </p>
       </div>
       <div className="w-full slider pt-0 justify-center items-center flex services">
         <SwiperComp>
@@ -32,11 +32,11 @@ export default function Services() {
                     />
                   </div>
 
-                  <div className="min-h-[250px] md:min-h-[272px] h-fit">
+                  <div className="min-h-[210px] md:min-h-[272px] h-fit">
                     <h4 className="	text-left font-semibold text-lg h-16">
                       {service.title}
                     </h4>
-                    <p className=" text-sm text-left">{service.description}</p>
+                    <p className=" text-xs sm:text-sm text-left">{service.description}</p>
                   </div>
                 </div>
               </SwiperSlide>

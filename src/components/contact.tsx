@@ -54,7 +54,7 @@ export default function Contact() {
         className="w-full max-w-[1400px] flex flex-col  justify-center items-center"
       >
         <div className="grid md:grid-cols-2 gap-6 md:gap-10 2xl:gap-20  w-full">
-          <div className="flex flex-col justify-center  h-full  border-white/25 border rounded-[20px]  card-bg z-0 px-6 xl:px-16 py-10 gap-6 xl:gap-10">
+          <div className="flex flex-col justify-center  h-full  border-white/25 border rounded-[20px]  card-bg z-0 px-6 xl:px-16 py-6 md:py-10 gap-3 sm:gap-6 xl:gap-10">
             <h3 className="text-left	 ">Contact Form</h3>
 
             <form
@@ -154,15 +154,15 @@ export default function Contact() {
             </form>
           </div>
 
-          <div className="flex flex-col justify-center  h-full  border-white/25 border rounded-[20px]  card-bg z-0 px-6 xl:px-16 py-10 gap-6 xl:gap-10">
+          <div className="flex flex-col justify-center  h-full  border-white/25 border rounded-[20px]  card-bg z-0 px-6 xl:px-16 py-6 md:py-10 gap-3 sm:gap-6 xl:gap-10">
             <h3 className="text-white text-left pb-3 md:pb-5	 ">Contact Us</h3>
-            <p className="text-white text-xs md:text-base w-full  text-left pb-8">
+            <p className="text-white text-xs md:text-base w-full  text-left pb-4 md:pb-8">
               Engage with Our Experts: For a detailed discussion about your
               unique requirements or to gain further insights into our services,
               we warmly encourage you to directly contact our team. We are here
               to assist you.
             </p>
-            <h3 className="text-white pb-3 md:pb-5 text-left	 ">
+            <h3 className="text-white pb-1 md:pb-5 text-left	 ">
               Stay connected
             </h3>
             <div className="flex flex-wrap text-neutral-50 text-sm">
