@@ -12,7 +12,9 @@ export default function About() {
             Cyber Security Innovation with DePIN
           </h2>
 
+
           <p className="text-xs sm:text-sm md:text-base font-normal ">
+
             The DATS Project addresses a crucial need in the market by
             pioneering the #DePIN category, specifically targeting Web3
             security. Our innovative desktop application enables individuals to
