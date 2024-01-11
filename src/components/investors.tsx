@@ -7,7 +7,7 @@ export default function Investors() {
     <div className="flex flex-col gap-6">
       <Title title="Investors" />
       <div className="flex justify-center">
-        <div className="max-w-[1400px] w-full grid gap-6 justify-center items-center content-center grid-cols-3 md:grid-cols-5 mx-auto  pt-5">
+        <div className="max-w-[1400px] w-full grid gap-4 md:gap-6 justify-center items-center content-center grid-cols-3 md:grid-cols-5 mx-auto  pt-5">
           {investors.map((item, index) => (
             /* <Link
               key={item.id}

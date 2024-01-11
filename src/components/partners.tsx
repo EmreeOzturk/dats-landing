@@ -7,7 +7,7 @@ export default function Partners() {
     <div className="flex flex-col gap-6">
       <Title title="Partners" />
       <div className="flex justify-center">
-        <div className="max-w-[1400px] w-full flex flex-wrap justify-center items-center gap-6 md:gap-12  mx-auto  pt-5">
+        <div className="max-w-[1400px] w-full flex flex-wrap justify-center items-center gap-4 sm:gap-6 xl:gap-12  mx-auto  pt-5">
           {partners.map((item, index) => (
             /*<Link
               key={item.id}

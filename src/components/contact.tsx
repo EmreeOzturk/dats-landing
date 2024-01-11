@@ -173,15 +173,14 @@ export default function Contact() {
                   target={"_Blank"}
                 >
                   <svg
-                    width="35"
-                    height="35"
+                    className="w-5 md:w-7 h-fit"
                     viewBox="0 0 35 35"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M20.3306 15.155L31.4059 2.1875H28.7809L19.1669 13.4466L11.4844 2.1875H2.625L14.2406 19.215L2.625 32.8125H5.25L15.4044 20.9213L23.5178 32.8125H32.3772L20.3306 15.155ZM16.7366 19.3638L15.5597 17.6684L6.195 4.17812H10.2266L17.7822 15.0653L18.9591 16.7606L28.7831 30.9137H24.7516L16.7366 19.3638Z"
-                      fill="white"
+                      fill="currentColor"
                     />
                   </svg>
                 </Link>
