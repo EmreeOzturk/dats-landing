@@ -63,8 +63,8 @@ function Card({ title, description, image }: any) {
       </div>
 
       <div className="min-h-[130px] h-fit md:min-h-[180px] overflow-hidden flex flex-col gap-3 px-3 md:px-5">
-        <h4 className="text-xl text-center">{title}</h4>
-        <p className="!text-center ">{description}</p>
+        <h4 className="text-xl text-center font-semibold">{title}</h4>
+        <p className="text-left md:text-center text-xs sm:text-sm ">{description}</p>
       </div>
     </div>
   );
