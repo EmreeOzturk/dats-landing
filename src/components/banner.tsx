@@ -67,7 +67,7 @@ export default function Banner() {
             src="/images/earth_3d.png"
             className="w-full h-full"
             alt="Video oynatılamıyorsa gösterilecek resim"
-          ></img>
+          ></img> 
           Your browser does not support the video tag.
         </video>
       ) : (
