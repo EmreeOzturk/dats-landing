@@ -8,7 +8,7 @@ export default function App() {
       <div className="h-full flex flex-col items-center justify-center text-center gap-4 md:gap-6 pt-10 md:pt-20">
         <h2 className=" text-center  ">DATS Desktop Software </h2>
 
-        <p className="w-full md:w-5/6 max-w-[1200px] text-xs pb-10 md:text-lg">
+        <p className="w-full md:w-5/6 max-w-[1200px] text-xs pb-6 md:pb-10 md:text-lg">
           The DATS Desktop Software allows users to easily contribute their
           spare computing power, fully managed and secured by its Proof of
           Resources (PoR) smart contract, negating the need for additional
