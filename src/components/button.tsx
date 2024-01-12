@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function NewButton() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 justify-center gap-6 md:gap-10 items-center w-full ">
@@ -8,14 +10,14 @@ export default function NewButton() {
         >
           <p className="text-center text-sm md:text-2xl">{item?.title}</p>
 
-          <button className="w-2/3 md:w-[250px] mt-2 md:mt-5 bg-white/[0.023] rounded-lg backdrop-blur-sm border-white px-2 py-3 border-[1px] text-base md:text-lg font-medium text-white  items-center bg-none text-center flex gap-3 justify-center">
+          <Link href={item?.link} target="_blank" className="w-2/3 md:w-[250px] mt-2 md:mt-5 bg-white/[0.023] rounded-lg backdrop-blur-sm border-white px-2 py-3 border-[1px] text-base md:text-lg font-medium text-white  items-center bg-none text-center flex gap-3 justify-center">
             <p className="text-xs md:text-lg">{item?.description}</p>
             <img
               className={` ${item?.addClass} w-6 h-6 md:w-12 md:h-12`}
               src={item?.svg}
               alt=""
             />
-          </button>
+          </Link>
         </div>
       ))}
     </div>
