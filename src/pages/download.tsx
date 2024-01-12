@@ -16,13 +16,12 @@ export default function App() {
           resources, streamlining operations in an innovative way.
         </p>
         <NewButton />
-
         <img
           className="container pt-6 md:pt-10"
           src="/destop-sofware.png"
           alt=""
         />
-        <NewButton />
+        
       </div>
     </MainLayout>
   );
