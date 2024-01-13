@@ -8,7 +8,7 @@ export default function About() {
     >
       <div className="h-full flex flex-col items-center justify-center gap-6 w-full md:w-2/3 ">
         <div className="w-full">
-          <h2 className="text-xl md:text-[45px] pb-6 md:pb-10 text-left w-full ">
+          <h2 className="text-xl md:text-3xl xxl:text-[45px] pb-6 md:pb-10 text-left w-full leading-relaxed ">
             Cyber Security Innovation with DePIN
           </h2>
 
