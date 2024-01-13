@@ -5,8 +5,8 @@ export default function SectionEarth() {
   return (
     <>
       <div className="w-full  flex flex-col place-content-center gap-8 md:gap-10 xl:gap-20 justify-center items-center relative h-full">
-        <video
-          className={`absolute hidden md:block invisible md:visible  transition-all -right-[80vh]  h-full w-[100vw] scale-125 `}
+      <video
+          className={`absolute hidden md:block invisible md:visible  transition-all -right-[80vh]  h-full w-[100vw] scale-125 z-0`}
           autoPlay
           loop
           muted
@@ -15,7 +15,7 @@ export default function SectionEarth() {
           <source src="earthscroll.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
-        <div className="w-full ">
+        <div className="w-full z-10">
           <h1 className="w-full xl:w-9/12 text-left font-semibold text-lg md:text-4xl z-10 ">
             Be part of a community where your computer resources drive advanced
             cybersecurity. Together, we create a safer digital world and share
