@@ -1,5 +1,6 @@
 import { getOS, useBrowserDetect } from "@/helpers/helpers";
 import { useEffect, useRef, useState } from "react";
+import Spline from "@splinetool/react-spline";
 
 export default function Banner() {
   const videoRef: any = useRef(null);
@@ -48,7 +49,7 @@ export default function Banner() {
         Resource (PoR) smart contract, fortifying Web3 & Web2 against intricate
         cyber threats.
       </h4>
-      {browser === "Chrome" || (os !== "iOS" && os !== "MacOS") ? (
+      {(browser === "Chrome" || (os !== "iOS" && os !== "MacOS")) ? (
         <video
           ref={videoRef}
           className={`absolute transform transition-all -bottom-[15vh] md:-bottom-[20vh] lg:-bottom-[28vh]  min-h-screen w-[100vw] md:w-[60vw] xl:w-[55vw] scale-150 md:scale-110 xl:scale-110 mx-auto animate__animated animate__fadeIn animate__faster ${
@@ -67,19 +68,28 @@ export default function Banner() {
             src="/images/earth_3d.png"
             className="w-full h-full"
             alt="Video oynatılamıyorsa gösterilecek resim"
-          ></img> 
+          ></img>
           Your browser does not support the video tag.
         </video>
       ) : (
-        <div
-          className={`absolute transform transition-all -bottom-[20vh] md:-bottom-[20vh] lg:-bottom-[28vh]  min-h-screen w-[90vw] xl:w-[55vw] xl:scale-110 mx-auto animate__animated animate__fadeIn animate__faster`}
-        >
-          <img
-            src="/images/earth_3d.png"
-            className="w-full h-full"
-            alt="Video oynatılamıyorsa gösterilecek resim"
-          ></img>
-        </div>
+        <>
+          <div className="absolute w-screen h-screen  left-0 top-0 z-10"></div>
+          <div className="w-[100vw] h-[100vh] absolute flex -bottom-[20vh] md:-bottom-[30vh] z-0 lex justify-center items-center">
+            <Spline
+              className="flex justify-center w-full h-fit  items-center "
+              scene="https://prod.spline.design/14RWtZimpUlwdEBF/scene.splinecode"
+            />
+          </div>
+          {/* <div
+            className={`absolute transform hidden transition-all -bottom-[35vh] md:-bottom-[20vh] lg:-bottom-[28vh]  min-h-screen w-[90vw]   mx-auto animate__animated animate__fadeIn animate__faster`}
+          >
+            <img
+              src="/images/earth_3d.png"
+              className="w-full h-full"
+              alt="Video oynatılamıyorsa gösterilecek resim"
+            ></img>
+          </div> */}
+        </>
       )}
       {/* <video
         ref={videoRef}

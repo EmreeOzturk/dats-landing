@@ -1,20 +1,41 @@
+import { getOS, useBrowserDetect } from "@/helpers/helpers";
+import Spline from "@splinetool/react-spline";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 export default function SectionEarth() {
+  const [os, setOs] = useState("Windows"); //["Windows", "MacOS", "iOS", "Android", "Linux"
+  const [browser, setBrowser] = useState("Chrome"); //["Chrome", "Safari", "Diğer"]
+
+  useEffect(() => {
+    setBrowser(useBrowserDetect());
+    setOs(getOS());
+  }, []);
   return (
     <>
       <div className="w-full  flex flex-col place-content-center gap-8 md:gap-10 xl:gap-20 justify-center items-center relative h-full">
-      <video
-          className={`absolute hidden md:block invisible md:visible  transition-all -right-[80vh]  h-full w-[100vw] scale-125 z-0`}
-          autoPlay
-          loop
-          muted
-          data-loaded="true"
-        >
-          <source src="earthscroll.webm" type="video/webm" />
-          Your browser does not support the video tag.
-        </video>
+        {(browser === "Chrome" || (os !== "iOS" && os !== "MacOS")) ? (
+          <video
+            className={`absolute hidden md:block invisible md:visible  transition-all -right-[80vh]  h-full w-[100vw] scale-125 z-0`}
+            autoPlay
+            loop
+            muted
+            data-loaded="true"
+          >
+            <source src="earthscroll.webm" type="video/webm" />
+            Your browser does not support the video tag.
+          </video>
+        ) : (
+          <>
+            <div className="absolute w-screen h-screen  left-0 top-0 z-10"></div>
+            <div className="w-[100vw] h-[100vh] absolute left-0 top-[15vh] scale-150 hidden md:flex -bottom-[30vh] z-0 lex justify-center items-center ">
+              <Spline
+                className="flex justify-center w-full h-fit -mr-[80vw] lg:-mr-[60vw] 2xl:-mr-[40vw] items-center "
+                scene="https://prod.spline.design/14RWtZimpUlwdEBF/scene.splinecode"
+              />
+            </div>
+          </>
+        )}
         <div className="w-full z-10">
           <h1 className="w-full xl:w-9/12 text-left font-semibold text-lg md:text-4xl z-10 ">
             Be part of a community where your computer resources drive advanced
@@ -64,7 +85,9 @@ function Card({ title, description, image }: any) {
 
       <div className="min-h-[130px] h-fit md:min-h-[180px] overflow-hidden flex flex-col gap-3 px-3 md:px-5">
         <h4 className="text-xl text-center font-semibold">{title}</h4>
-        <p className="text-left md:text-center text-xs sm:text-sm ">{description}</p>
+        <p className="text-left md:text-center text-xs sm:text-sm ">
+          {description}
+        </p>
       </div>
     </div>
   );
