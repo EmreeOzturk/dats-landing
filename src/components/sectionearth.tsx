@@ -6,10 +6,13 @@ import React, { useState, useEffect } from "react";
 export default function SectionEarth() {
   const [os, setOs] = useState("Windows"); //["Windows", "MacOS", "iOS", "Android", "Linux"
   const [browser, setBrowser] = useState("Chrome"); //["Chrome", "Safari", "Diğer"]
-
+  const [show, setShow] = useState(false);
   useEffect(() => {
     setBrowser(useBrowserDetect());
     setOs(getOS());
+    setTimeout(() => {
+      setShow(true);
+    }, 500);
   }, []);
   return (
     <>
