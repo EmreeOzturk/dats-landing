@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <MainLayout title="DATSProject Cyber Security On Blockchain">
       <Banner />
-      <About />
+      <About /> 
       <Services />
       <SectionEarth />
       <FAQ />
