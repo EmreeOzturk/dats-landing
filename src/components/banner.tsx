@@ -45,7 +45,7 @@ export default function Banner() {
   }, []);
   return (
     <div className="h-screen w-full flex flex-col items-center gap-6 pt-20 xl:pt-24  relative">
-      <h1 className="z-10 drop-shadow-md">DePIN & Cyber Security</h1>
+      <h1 className="z-10 drop-shadow-md">DePIN: Cybersecurity, Redefined</h1>
 
       <h4 className="w-full xl:w-2/5 z-10 text-center ">
         We are innovating #DePIN through our developed application and Proof of
