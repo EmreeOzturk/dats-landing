@@ -26,7 +26,7 @@ const nextConfig = {
       },
      ]
    },
-   async redirects() {
+   /* async redirects() {
     return [
       {
         source: '/(.*)',
@@ -34,7 +34,7 @@ const nextConfig = {
         permanent: true,
       },
     ];
-  },
+  }, */
   reactStrictMode: true,
   compiler: {
     removeConsole: env.NODE_ENV === "production" ? true : false,
