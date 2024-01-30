@@ -18,10 +18,15 @@ const nextConfig = {
             key: 'X-Content-Type-Options',
             value: 'nosniff',
           },
-          /* {
-            key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self';",
-          }, */
+          {
+            key: 'content-security-policy',
+            value:
+              'frame-ancestors https://datsproject.io  http://localhost:3002 http://localhost:3000 ',
+          },
+          {
+            key: 'x-xss-protection',
+            value: '1; mode=block',
+          },
         ],
       },
      ]
@@ -34,6 +39,16 @@ const nextConfig = {
         permanent: true,
       },
     ];
+  }, */
+  /* experimental: {
+    optimizeCss: {
+      inlineFonts: true,
+      preloadFonts: true,
+      logLevel: 'error',
+    },
+  },
+  images: {
+    disableStaticImages: true,
   }, */
   reactStrictMode: true,
   compiler: {
