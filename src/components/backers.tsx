@@ -15,7 +15,7 @@ export default function Backers() {
               target="_blank"
               className="w-full flex justify-center"
             > */
-            <Image
+            <Image key={item.id}
               className="opacity-70 hover:opacity-100 md:saturate-0 hover:saturate-100"
               src={item.src}
               alt={`Partner Logo ${index + 1}`}
@@ -57,7 +57,7 @@ const backers = [
     src: "/images/Backers/Backers-4.png",
   },
   {
-    id: 5,
+    id: 6,
     link: "#",
     src: "/images/Backers/Backers-2.png",
   },

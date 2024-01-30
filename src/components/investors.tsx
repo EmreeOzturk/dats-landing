@@ -15,7 +15,7 @@ export default function Investors() {
               target="_blank"
               className="w-full flex justify-center"
             > */
-            <Image
+            <Image key={item.id}
               className="opacity-70 hover:opacity-100 md:saturate-0 hover:saturate-100"
               src={item.src}
               alt={`Partner Logo ${index + 1}`}
