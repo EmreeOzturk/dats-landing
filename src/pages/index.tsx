@@ -17,7 +17,7 @@ import MainLayout from "@/components/layout/mainLayout";
 
 export default function Home() {
   return (
-    <MainLayout title="DATSProject Cyber Security On Blockchain">
+    <MainLayout title="Depin: security, redefined">
       <Banner />
       <About /> 
       <Services />
