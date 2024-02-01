@@ -1,14 +1,20 @@
+import DeferNextScript from "@/hoc/NextCScript";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html lang="en" className="dark mode-dark" data-mui-color-scheme="dark" data-joy-color-scheme="dark"> 
+    <Html
+      lang="en"
+      className="dark mode-dark"
+      data-mui-color-scheme="dark"
+      data-joy-color-scheme="dark"
+    >
       <Head>
         <link rel="icon" href="/favicon.png" />
-        <link rel="icon" href="/favicon.png" sizes="32x32"/>
-        <link rel="icon" href="/favicon-192x192.png" sizes="192x192"/>
-        <link rel="apple-touch-icon" href="favicon-180x180.png"/>
-        <meta name="msapplication-TileImage" content="/favicon-270x270.png"/>
+        <link rel="icon" href="/favicon.png" sizes="32x32" />
+        <link rel="icon" href="/favicon-192x192.png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="favicon-180x180.png" />
+        <meta name="msapplication-TileImage" content="/favicon-270x270.png" />
         <meta
           name="description"
           content="DATS Project is a blockchain company that produces automated vulnerability scanning and cybersecurity solutions with high computing power for Blockchain and WEB3 security."
@@ -56,7 +62,7 @@ export default function Document() {
       </Head>
       <body className="overflow-x-hidden">
         <Main />
-        <NextScript />
+        <DeferNextScript />
       </body>
     </Html>
   );
