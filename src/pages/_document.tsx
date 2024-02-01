@@ -17,11 +17,11 @@ export default function Document() {
         <meta name="msapplication-TileImage" content="/favicon-270x270.png" />
         <meta
           name="description"
-          content="DATS Project is a blockchain company that produces automated vulnerability scanning and cybersecurity solutions with high computing power for Blockchain and WEB3 security."
+          content="We are innovating #DePIN through our developed application and Proof of Resource (PoR) smart contract, fortifying Web3 & Web2 against intricate cyber threats."
         />
         <meta
           property="og:title"
-          content="DATSProject Cyber Security On Blockchain"
+          content="Depin: security, redefined"
         />
         <meta property="og:url" content="https://datsproject.io/" />
         <meta
@@ -40,16 +40,16 @@ export default function Document() {
         <meta property="og:image:height" content="500" />
         <meta
           property="og:image:alt"
-          content="DATSProject Cyber Security On Blockchain"
+          content="Depin: security, redefined"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="DATSProject Cyber Security On Blockchain"
+          content="Depin: security, redefined"
         />
         <meta
           name="twitter:description"
-          content="DATS Project is a blockchain company that produces automated vulnerability scanning and cybersecurity solutions with high computing power for Blockchain and WEB3 security."
+          content="We are innovating #DePIN through our developed application and Proof of Resource (PoR) smart contract, fortifying Web3 & Web2 against intricate cyber threats."
         />
         <meta
           name="twitter:image"
@@ -57,12 +57,13 @@ export default function Document() {
         />
         <meta
           name="twitter:image:alt"
-          content="DATSProject Cyber Security On Blockchain"
+          content="Depin: security, redefined"
         />
       </Head>
       <body className="overflow-x-hidden">
         <Main />
         <DeferNextScript />
+        <NextScript />
       </body>
     </Html>
   );
