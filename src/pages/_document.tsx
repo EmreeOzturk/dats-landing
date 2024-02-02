@@ -30,11 +30,11 @@ export default function Document() {
         />
         <meta
           property="og:image"
-          content="https://datsproject.io/images/1500x500.jpg"
+          content="https://datsproject.io/images/webbanner.jpg"
         />
         <meta
           property="og:image:secure_url"
-          content="https://datsproject.io/images/1500x500.jpg"
+          content="https://datsproject.io/images/webbanner.jpg"
         />
         <meta property="og:image:width" content="1500" />
         <meta property="og:image:height" content="500" />
