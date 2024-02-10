@@ -2,13 +2,18 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches:
+    - dev
+    - master
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
+    env:
+      IMAGE_NAME: ${{ github.event_name == 'push' && contains(github.event.ref, 'master')  && 'datsproject-io' || 'datsproject-io-dev' }}
+      NAMESPACE: default
+      KUBECONFIG_CONTENT: ${{ github.event_name == 'push' && contains(github.event.ref, 'master')  && secrets.KUBECONFIG || secrets.KUBECONFIG_DEV }}
 
     steps:
     - name: Checkout Code
@@ -29,7 +34,7 @@ jobs:
       with:
         context: .
         push: true
-        tags: ${{ secrets.NEXUS_URL }}/datsproject-io:v${{ github.run_number }}
+        tags: ${{ secrets.NEXUS_URL }}/${{ env.IMAGE_NAME }}:v${{ github.run_number }}
 
     - name: Set up Kubectl
       uses: azure/setup-kubectl@v3
@@ -38,13 +43,11 @@ jobs:
       uses: azure/setup-helm@v2
 
     - name: Deploy to Kubernetes using Helm
-      env:
-        KUBECONFIG_CONTENT: ${{ secrets.KUBECONFIG }}
       run: |
-        # kubeconfig and test
+        # kubeconfig and test 
         echo "$KUBECONFIG_CONTENT" > kubeconfig
         export KUBECONFIG=$(pwd)/kubeconfig
         kubectl cluster-info
 
         # deploy k8s
-        helm upgrade --install datsproject-io ./helm --set image.repository=${{ secrets.NEXUS_URL }}/datsproject-io --set image.tag=v${{ github.run_number }} --namespace default --wait --kubeconfig=$KUBECONFIG
+        helm upgrade --install ${{ env.IMAGE_NAME }} ./helm --set image.repository=${{ secrets.NEXUS_URL }}/${{ env.IMAGE_NAME }} --set image.tag=v${{ github.run_number }} --namespace ${{ env.NAMESPACE }} --wait --kubeconfig=$KUBECONFIG
