@@ -82,7 +82,7 @@ export default function App() {
           </div>
           <div className=" flex flex-col divide-y w-full -mt-6">
             {data.length > 0 &&
-              data.map((item: any, index) => (
+              data.slice(0,10).map((item: any, index) => (
                 <div key={index} className="grid grid-cols-3 w-full">
                   <div className="p-3">#{item?.order}</div>
                   <div className="p-3">{item?.address}</div>
