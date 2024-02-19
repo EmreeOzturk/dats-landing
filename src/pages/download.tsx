@@ -1,8 +1,43 @@
 import MainLayout from "@/components/layout/mainLayout";
 import Image from "next/image";
 import NewButton from "@/components/button";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function App() {
+  const [selected, setSelected] = useState(0);
+  const [data, setData] = useState([]);
+
+  async function fetchData() {
+    try {
+      //axios
+      if (selected === 0) {
+      const response = axios.get(`http://report.datsproject.io/leader-board/${
+        // now year
+        new Date().getFullYear()
+      }/${
+        // now month
+        new Date().getMonth() + 1
+      }
+      `);
+      const data = (await response).data;
+      console.log(data);
+      setData(data);
+      }
+      if (selected === 1) {
+        const response = axios.get(`http://report.datsproject.io/leader-board/all`);
+        const data = (await response).data;
+        console.log(data);
+        setData(data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, [selected]);
   return (
     <MainLayout title="DATS Desktop Software">
       <div className="h-full flex flex-col items-center justify-center text-center gap-4 md:gap-6 pt-10 md:pt-20">
@@ -16,12 +51,42 @@ export default function App() {
           resources, streamlining operations in an innovative way.
         </p>
         <NewButton />
-        <img
+        {/* <img
           className="container pt-6 md:pt-10"
           src="/destop-sofware.png"
           alt=""
-        />
-        
+        /> */}
+        <h2 className="mt-10">Leaderboard</h2>
+        <div className="flex w-full flex-col p-6 gap-6 border border-white/25 card-bg rounded-xl items-center">
+          <div className=" w-2/3 border border-white/25 grid grid-cols-2 divide-x rounded-xl">
+            {["This Month", "All Time"].map((item, index) => (
+              <button
+                onClick={() => setSelected(index)}
+                key={index}
+                className={`p-3 transition-all ${
+                  selected === index ? "underline underline-offset-2 " : ""
+                } `}
+              >
+                {item}
+              </button>
+            ))}
+          </div>
+          <div className="grid grid-cols-3 w-full border-b border-white">
+            {["Rank", "Wallet", "Score"].map((item, index) => (
+              <div key={index} className="p-3">
+                {item}
+              </div>
+            ))}
+          </div>
+          {data.length > 0 &&
+            data.map((item:any, index) => (
+              <div key={index} className="grid grid-cols-3 w-full divide-y">
+                <div className="p-3">#{item?.order}</div>
+                <div className="p-3">{item?.address}</div>
+                <div className="p-3">{item?.totalPoint}</div>
+              </div>
+            ))}
+        </div>
       </div>
     </MainLayout>
   );

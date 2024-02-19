@@ -59,6 +59,7 @@ export default function Document() {
           name="twitter:image:alt"
           content="Depin: security, redefined"
         />
+        <title>DATS Project</title>
       </Head>
       <body className="overflow-x-hidden">
         <Main />
