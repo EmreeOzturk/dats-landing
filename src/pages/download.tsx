@@ -16,8 +16,10 @@ export default function App() {
           // now year
           new Date().getFullYear()
         }/${
-          // now month
-          new Date().getMonth() + 1
+          // now month 
+          (new Date().getMonth() + 1).toString().padStart(2, '0')
+          //1 conver to 01
+
         }
       `);
         const data = (await response).data;
