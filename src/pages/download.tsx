@@ -60,7 +60,7 @@ export default function App() {
         /> */}
         <h2 className="mt-10">Leaderboard</h2>
         <div className="flex w-full flex-col p-6 gap-6 border border-white/25 card-bg rounded-xl items-center">
-          <div className=" w-2/3 border border-white/25 grid grid-cols-2 divide-x rounded-xl">
+          <div className=" w-full lg:w-2/3 border border-white/25 grid grid-cols-2 divide-x rounded-xl">
             {["This Month", "All Time"].map((item, index) => (
               <button
                 onClick={() => setSelected(index)}
@@ -73,9 +73,9 @@ export default function App() {
               </button>
             ))}
           </div>
-          <div className="grid grid-cols-3 w-full border-b-2 border-white">
+          <div className="grid grid-cols-5 lg:grid-cols-3 w-full border-b-2 border-white">
             {["Rank", "Wallet", "Score"].map((item, index) => (
-              <div key={index} className="p-3">
+              <div key={index} className="p-3 first:col-span-1 col-span-2 lg:col-span-1">
                 {item}
               </div>
             ))}
@@ -83,14 +83,14 @@ export default function App() {
           <div className=" flex flex-col divide-y w-full -mt-6">
             {data.length > 0 &&
               data.slice(0, 10).map((item: any, index) => (
-                <div key={index} className="grid grid-cols-3 w-full text-xs lg:text-sm">
-                  <div className="p-3">#{item?.order}</div>
-                  <div className="p-3">
+                <div key={index} className="grid grid-cols-5 lg:grid-cols-3 w-full text-xs lg:text-sm">
+                  <div className="p-3 col-span-1 ">#{item?.order}</div>
+                  <div className="p-3 col-span-2 lg:col-span-1">
                     {item?.address.slice(0, 6) +
                       "..." +
                       item?.address.slice(-6)}
                   </div>
-                  <div className="p-3">{item?.totalPoint.toFixed(2)}</div>
+                  <div className="p-3 col-span-2 lg:col-span-1">{item?.totalPoint.toFixed(2)}</div>
                 </div>
               ))}
           </div>
