@@ -12,7 +12,7 @@ export default function App() {
     try {
       //axios
       if (selected === 0) {
-        const response = axios.get(`${url}$/${
+        const response = axios.get(`${url}/${
           // now year
           new Date().getFullYear()
         }/${
