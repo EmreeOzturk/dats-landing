@@ -1,6 +1,8 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import { Metadata } from "next";
 import Head from "next/head";
+import { useEffect } from "react";
 
 export default function MainLayout({
   children,
@@ -9,14 +11,12 @@ export default function MainLayout({
   children: React.ReactNode;
   title: string;
 }) {
+  const titleRender = title ? title + " - DATS Project" : "DATS Project";
+
   return (
     <>
       <Head>
-        {title ? (
-          <title>{title} - DATS Project</title>
-        ) : (
-          <title>DATS Project</title>
-        )}
+        <title>{titleRender}</title>
       </Head>
       <main
         className="w-full h-full flex justify-start items-center flex-col max-w-[100vw] overflow-x-hidden text-white bg-cover  pt-16 md:pt-24 gap-20 md:gap-40 px-3 relative"

@@ -73,7 +73,7 @@ export default function App() {
               </button>
             ))}
           </div>
-          <div className="grid grid-cols-3 w-full border-b border-white">
+          <div className="grid grid-cols-3 w-full border-b-2 border-white">
             {["Rank", "Wallet", "Score"].map((item, index) => (
               <div key={index} className="p-3">
                 {item}
