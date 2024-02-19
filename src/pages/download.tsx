@@ -86,7 +86,7 @@ export default function App() {
                 <div key={index} className="grid grid-cols-3 w-full">
                   <div className="p-3">#{item?.order}</div>
                   <div className="p-3">{item?.address}</div>
-                  <div className="p-3">{item?.totalPoint}</div>
+                  <div className="p-3">{item?.totalPoint.toFixed(2)}</div>
                 </div>
               ))}
           </div>
