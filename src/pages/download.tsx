@@ -12,20 +12,22 @@ export default function App() {
     try {
       //axios
       if (selected === 0) {
-      const response = axios.get(`http://report.datsproject.io/leader-board/${
-        // now year
-        new Date().getFullYear()
-      }/${
-        // now month
-        new Date().getMonth() + 1
-      }
+        const response = axios.get(`http://report.datsproject.io/leader-board/${
+          // now year
+          new Date().getFullYear()
+        }/${
+          // now month
+          new Date().getMonth() + 1
+        }
       `);
-      const data = (await response).data;
-      console.log(data);
-      setData(data);
+        const data = (await response).data;
+        console.log(data);
+        setData(data);
       }
       if (selected === 1) {
-        const response = axios.get(`http://report.datsproject.io/leader-board/all`);
+        const response = axios.get(
+          `http://report.datsproject.io/leader-board/all`
+        );
         const data = (await response).data;
         console.log(data);
         setData(data);
@@ -78,14 +80,16 @@ export default function App() {
               </div>
             ))}
           </div>
-          {data.length > 0 &&
-            data.map((item:any, index) => (
-              <div key={index} className="grid grid-cols-3 w-full divide-y">
-                <div className="p-3">#{item?.order}</div>
-                <div className="p-3">{item?.address}</div>
-                <div className="p-3">{item?.totalPoint}</div>
-              </div>
-            ))}
+          <div className=" flex flex-col divide-y w-full -mt-6">
+            {data.length > 0 &&
+              data.map((item: any, index) => (
+                <div key={index} className="grid grid-cols-3 w-full">
+                  <div className="p-3">#{item?.order}</div>
+                  <div className="p-3">{item?.address}</div>
+                  <div className="p-3">{item?.totalPoint}</div>
+                </div>
+              ))}
+          </div>
         </div>
       </div>
     </MainLayout>
