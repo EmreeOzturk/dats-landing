@@ -7,29 +7,27 @@ import axios from "axios";
 export default function App() {
   const [selected, setSelected] = useState(0);
   const [data, setData] = useState([]);
-
+  const url = "https://report.datsproject.io/leader-board";
   async function fetchData() {
     try {
       //axios
       if (selected === 0) {
-        const response = axios.get(`http://report.datsproject.io/leader-board/${
+        const response = axios.get(`${url}$/${
           // now year
           new Date().getFullYear()
         }/${
-          // now month 
-          (new Date().getMonth() + 1).toString().padStart(2, '0')
+          // now month
+          (new Date().getMonth() + 1).toString().padStart(2, "0")
           //1 conver to 01
-
         }
       `);
         const data = (await response).data;
+        //const data = await response.json();
         console.log(data);
         setData(data);
       }
       if (selected === 1) {
-        const response = axios.get(
-          `http://report.datsproject.io/leader-board/all`
-        );
+        const response = axios.get(`${url}/all`);
         const data = (await response).data;
         console.log(data);
         setData(data);
