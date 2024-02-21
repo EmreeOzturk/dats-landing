@@ -51,7 +51,7 @@ const buttonData = [
     title: "Windows",
     description: "DOWNLOAD",
     svg: "/images/icons/ri_windows-fill2.svg",
-    link: "https://github.com/datsproject/dats-desktop-publish/releases/download/v1.0.7/Dats-Project-Setup-1.0.7.exe",
+    link: "https://github.com/datsproject/dats-desktop-publish/releases/download/v1.0.8/Dats-Project-Setup-1.0.8.exe",
   },
   {
     id: 2,
