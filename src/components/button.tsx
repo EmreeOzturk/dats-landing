@@ -12,7 +12,7 @@ export default function NewButton() {
           <p className="text-center text-sm md:text-2xl">{item?.title}</p>
           {item.children ? (
             <DropDownSelect textBtn={item.description} icon={item.svg}>
-              <div className="bg-black/90 rounded-b-lg backdrop-blur-sm flex gap-3 flex-col p-4 h-full w-1/2 md:w-2/3 lg:w-[250px]">
+              <div className="bg-black/90 rounded-b-lg backdrop-blur-sm flex gap-3 flex-col p-4 h-full w-full min-w-40 lg:w-[250px]">
                 {item.children.map((child: any) => (
                   <Link
                     href={child ? child.link : item.link}
