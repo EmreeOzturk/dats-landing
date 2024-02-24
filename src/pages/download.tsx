@@ -6,12 +6,18 @@ import axios from "axios";
 
 export default function App() {
   const [selected, setSelected] = useState(0);
+  const [loading, setLoading] = useState(false);
   const [data, setData]: any = useState([]);
   const url = "https://report.datsproject.io/leader-board";
   const [page, setPage] = useState(0);
   const [totalPage, setTotalPage] = useState(0);
   async function fetchData() {
+    setLoading(true);
     try {
+      let getLocation = await fetch("/api/get-geo");
+      let location = await getLocation.json();
+      console.log(location);
+
       //axios
       if (selected === 0) {
         const response = axios.get(`${url}/${
@@ -24,8 +30,6 @@ export default function App() {
         }
       `);
         const data = (await response).data;
-        //const data = await response.json();
-        console.log(data);
         setData(data);
         setTotalPage(data.length / 20);
       }
@@ -37,24 +41,28 @@ export default function App() {
       }
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false);
     }
   }
-
-  useEffect(() => {
-    fetchData();
-  }, [selected]);
   function formatCoordinates(data: string) {
-    if (!data) return "null";
+    if (!data) return "emty";
     // Veriyi virgülle ayırarak ikiye böleriz
     const [latitude, longitude] = data.split(";");
 
     // Koordinatları virgülle birleştiririz ve ondalık kısmını 2 basamağa yuvarlarız
-    const formattedData = `${parseFloat(latitude).toFixed(2)};${parseFloat(
-      longitude
-    ).toFixed(2)}`;
+    const formattedData =
+      latitude && latitude !== "null"
+        ? `${parseFloat(latitude).toFixed(2)};${parseFloat(longitude).toFixed(
+            2
+          )}`
+        : "emty";
 
     return formattedData;
   }
+  useEffect(() => {
+    fetchData();
+  }, [selected]);
   return (
     <MainLayout title="DATS Desktop Software">
       <div className="h-full flex flex-col items-center justify-center text-center gap-4 md:gap-6 pt-10 md:pt-20 w-full max-w-[100vw]">
@@ -90,7 +98,7 @@ export default function App() {
             ))}
           </div>
           <div className=" overflow-x-auto w-full">
-            <div className="w-[800px] 2xl:w-full flex flex-col gap-6">
+            <div className="w-[800px] md:w-full flex flex-col gap-6">
               <div className="grid grid-cols-12  w-full border-b-2 border-white">
                 {[
                   "Rank",
@@ -112,6 +120,11 @@ export default function App() {
                 ))}
               </div>
               <div className=" flex flex-col divide-y w-full -mt-6">
+                {loading && (
+                  <div className="w-full h-full  flex justify-center items-center">
+                    Loading...
+                  </div>
+                )}
                 {data.length > 0 &&
                   data
                     .slice(page * 20, 20 * (page + 1))
@@ -174,4 +187,3 @@ export default function App() {
     </MainLayout>
   );
 }
-
