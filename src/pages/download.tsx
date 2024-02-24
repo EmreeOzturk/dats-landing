@@ -49,7 +49,7 @@ export default function App() {
     const [latitude, longitude] = data.split(";");
 
     // Koordinatları virgülle birleştiririz ve ondalık kısmını 2 basamağa yuvarlarız
-    const formattedData = `${parseFloat(latitude).toFixed(2)}; ${parseFloat(
+    const formattedData = `${parseFloat(latitude).toFixed(2)};${parseFloat(
       longitude
     ).toFixed(2)}`;
 
