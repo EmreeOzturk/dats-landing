@@ -31,25 +31,6 @@ const nextConfig = {
       },
      ]
    },
-   /* async redirects() {
-    return [
-      {
-        source: '/(.*)',
-        destination: 'https://datsproject.io/*',
-        permanent: true,
-      },
-    ];
-  }, */
-  /* experimental: {
-    optimizeCss: {
-      inlineFonts: true,
-      preloadFonts: true,
-      logLevel: 'error',
-    },
-  },
-  images: {
-    disableStaticImages: true,
-  }, */
   reactStrictMode: true,
   compiler: {
     removeConsole: env.NODE_ENV === "production" ? true : false,
