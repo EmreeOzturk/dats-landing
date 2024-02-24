@@ -6,8 +6,10 @@ import axios from "axios";
 
 export default function App() {
   const [selected, setSelected] = useState(0);
-  const [data, setData] = useState([]);
+  const [data, setData]: any = useState([]);
   const url = "https://report.datsproject.io/leader-board";
+  const [page, setPage] = useState(0);
+  const [totalPage, setTotalPage] = useState(0);
   async function fetchData() {
     try {
       //axios
@@ -25,6 +27,7 @@ export default function App() {
         //const data = await response.json();
         console.log(data);
         setData(data);
+        setTotalPage(data.length / 20);
       }
       if (selected === 1) {
         const response = axios.get(`${url}/all`);
@@ -40,9 +43,21 @@ export default function App() {
   useEffect(() => {
     fetchData();
   }, [selected]);
+  function formatCoordinates(data: string) {
+    if (!data) return "null";
+    // Veriyi virgülle ayırarak ikiye böleriz
+    const [latitude, longitude] = data.split(";");
+
+    // Koordinatları virgülle birleştiririz ve ondalık kısmını 2 basamağa yuvarlarız
+    const formattedData = `${parseFloat(latitude).toFixed(2)}; ${parseFloat(
+      longitude
+    ).toFixed(2)}`;
+
+    return formattedData;
+  }
   return (
     <MainLayout title="DATS Desktop Software">
-      <div className="h-full flex flex-col items-center justify-center text-center gap-4 md:gap-6 pt-10 md:pt-20">
+      <div className="h-full flex flex-col items-center justify-center text-center gap-4 md:gap-6 pt-10 md:pt-20 w-full max-w-[100vw]">
         <h2 className=" text-center  ">DATS Desktop Software </h2>
 
         <p className="w-full md:w-5/6 max-w-[1200px] text-xs pb-6 md:pb-10 md:text-lg">
@@ -59,7 +74,8 @@ export default function App() {
           alt=""
         /> */}
         <h2 className=" mt-6 lg:mt-10">Leaderboard</h2>
-        <div className="flex w-full flex-col p-6 gap-6 border border-white/25 card-bg rounded-xl items-center">
+
+        <div className="flex w-full flex-col min-h-screen pb-20 p-6 gap-6 border border-white/25 card-bg rounded-xl items-center relative">
           <div className=" w-full lg:w-2/3 border border-white/25 grid grid-cols-2 divide-x rounded-xl">
             {["This Month", "All Time"].map((item, index) => (
               <button
@@ -73,29 +89,89 @@ export default function App() {
               </button>
             ))}
           </div>
-          <div className="grid grid-cols-5 lg:grid-cols-3 w-full border-b-2 border-white">
-            {["Rank", "Wallet", "Score"].map((item, index) => (
-              <div key={index} className="p-3 first:col-span-1 col-span-2 lg:col-span-1">
-                {item}
-              </div>
-            ))}
-          </div>
-          <div className=" flex flex-col divide-y w-full -mt-6">
-            {data.length > 0 &&
-              data.slice(0, 10).map((item: any, index) => (
-                <div key={index} className="grid grid-cols-5 lg:grid-cols-3 w-full text-xs lg:text-sm">
-                  <div className="p-3 col-span-1 ">#{item?.order}</div>
-                  <div className="p-3 col-span-2 lg:col-span-1">
-                    {item?.address.slice(0, 6) +
-                      "..." +
-                      item?.address.slice(-6)}
+          <div className=" overflow-x-auto w-full">
+            <div className="w-[800px] 2xl:w-full flex flex-col gap-6">
+              <div className="grid grid-cols-12  w-full border-b-2 border-white">
+                {[
+                  "Rank",
+                  "Wallet",
+                  "Score",
+                  "Resources",
+                  "Cpu",
+                  "Bandwith",
+                  "Location",
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className={`p-3 first:col-span-1  ${
+                      item === "Cpu" ? "col-span-1" : "col-span-2"
+                    }`}
+                  >
+                    {item}
                   </div>
-                  <div className="p-3 col-span-2 lg:col-span-1">{item?.totalPoint.toFixed(2)}</div>
-                </div>
-              ))}
+                ))}
+              </div>
+              <div className=" flex flex-col divide-y w-full -mt-6">
+                {data.length > 0 &&
+                  data
+                    .slice(page * 20, 20 * (page + 1))
+                    .map((item: any, index: number) => (
+                      <div
+                        key={index}
+                        className="grid grid-cols-12 w-full text-xs lg:text-sm"
+                      >
+                        <div className="p-3 col-span-1 ">#{item?.order}</div>
+                        <div className="p-3 col-span-2">
+                          {item?.address.slice(0, 6) +
+                            "..." +
+                            item?.address.slice(-6)}
+                        </div>
+                        <div className="p-3 col-span-2">
+                          {item?.totalPoint.toFixed(2)}
+                        </div>
+                        <div className="p-3 col-span-2">
+                          {item?.assignedResourceCount}
+                        </div>
+                        <div className="p-3 col-span-1">
+                          {item?.assignedCpuCount}
+                        </div>
+                        <div className="p-3 col-span-2">
+                          {item?.assignedBandwith}
+                        </div>
+                        <div className="p-3 col-span-2">
+                          {formatCoordinates(item?.lastLocation)}
+                        </div>
+                      </div>
+                    ))}
+              </div>
+            </div>
+            <div className="flex justify-between items-center w-full h-20  bottom-0 left-0 pb-3 px-6 absolute">
+              <button
+                onClick={() => {
+                  if (page > 0) {
+                    setPage(page - 1);
+                  }
+                }}
+                className="p-3 border border-white/25 rounded-lg"
+              >
+                Prev
+              </button>
+              {page + 1} of {Math.ceil(totalPage)}
+              <button
+                onClick={() => {
+                  if (page + 1 < totalPage) {
+                    setPage(page + 1);
+                  }
+                }}
+                className="p-3 border border-white/25 rounded-lg"
+              >
+                Next
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </MainLayout>
   );
 }
+
