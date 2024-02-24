@@ -3,20 +3,8 @@ import Image from "next/image";
 import NewButton from "@/components/button";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { GetServerSidePropsContext, GetServerSidePropsResult } from "next";
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
-  const countryCode = context.req.headers["cf-ipcountry"];
-
-  return {
-    props: {
-      countryCode,
-    },
-  };
-}
-
-export default function App({ countryCode }: { countryCode: string }) {
-  console.log("countryCode", countryCode);
+export default function App() {
   
   const [selected, setSelected] = useState(0);
   const [loading, setLoading] = useState(false);
