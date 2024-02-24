@@ -11,7 +11,7 @@ export const config = {
 } */
 
 
-export default async function middleware(req: NextRequest) {
+export default async function handle(req: NextRequest) {
   const countryCode = req.headers.get('cf-ipcountry') || 'Unknown'; 
 
   const { nextUrl: url, geo } = req;
