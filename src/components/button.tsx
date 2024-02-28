@@ -51,7 +51,7 @@ const buttonData = [
     title: "Windows",
     description: "DOWNLOAD",
     svg: "/images/icons/ri_windows-fill2.svg",
-    link: "https://github.com/datsproject/dats-desktop-publish/releases/download/v1.0.8/Dats-Project-Setup-1.0.8.exe",
+    link: "https://github.com/datsproject/dats-desktop-publish/releases/download/v1.0.9/Dats-Project-Setup-1.0.9.exe",
   },
   {
     id: 2,
@@ -63,7 +63,7 @@ const buttonData = [
         description: "DOWNLOAD",
         addClass: "md:mb-1.5 -mt-1.5",
         svg: "/images/icons/ic_outline-apple.svg",
-        link: "https://github.com/datsproject/dats-desktop-publish/releases/download/v1.0.8/Dats-Project-1.0.8.dmg",
+        link: "https://github.com/datsproject/dats-desktop-publish/releases/download/v1.0.9/Dats-Project-1.0.9-arm64.dmg",
       },
       {
         id: 2,
@@ -71,13 +71,12 @@ const buttonData = [
         description: "DOWNLOAD",
         addClass: "md:mb-1.5 -mt-1.5",
         svg: "/images/icons/ic_outline-apple.svg",
-        link: "https://github.com/datsproject/dats-desktop-publish/releases/download/v1.0.8/Dats-Project-1.0.8-arm64.dmg",
+        link: "https://github.com/datsproject/dats-desktop-publish/releases/download/v1.0.9/Dats-Project-1.0.9.dmg",
       },
     ],
     description: "DOWNLOAD",
     addClass: "md:mb-1.5 -mt-1.5",
-    svg: "/images/icons/ic_outline-apple.svg",
-    link: "https://github.com/datsproject/dats-desktop-publish/releases/download/v1.0.7/Dats-Project-1.0.7-arm64.dmg",
+    svg: "/images/icons/ic_outline-apple.svg"
   },
   {
     id: 3,
@@ -92,7 +91,7 @@ const buttonData = [
         description: "DOWNLOAD",
         addClass: "md:mb-1.5 -mt-1.5",
         svg: "/images/icons/ri_ubuntu-fill.svg",
-        link: "https://github.com/datsproject/dats-desktop-publish/releases/download/v1.0.8/dats-desktop_1.0.8_amd64.deb",
+        link: "https://github.com/datsproject/dats-desktop-publish/releases/download/v1.0.9/dats-desktop_1.0.9_amd64.deb",
       },
       {
         id: 2,
@@ -100,9 +99,8 @@ const buttonData = [
         description: "DOWNLOAD",
         addClass: "md:mb-1.5 -mt-1.5",
         svg: "/images/icons/ri_centos-fill.svg",
-        link: "https://github.com/datsproject/dats-desktop-publish/releases/download/v1.0.8/dats-desktop-1.0.8.x86_64.rpm",
+        link: "https://github.com/datsproject/dats-desktop-publish/releases/download/v1.0.9/dats-desktop-1.0.9.x86_64.rpm",
       },
     ],
-    link: "https://github.com/datsproject/dats-desktop-publish/releases/download/v1.0.7/Dats-Project-1.0.7.dmg",
   },
 ];
