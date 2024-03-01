@@ -23,7 +23,7 @@ export default function Home() {
       <Services />
       <SectionEarth />
       <FAQ />
-      <Teams />
+      {/* <Teams /> */}
       {/* <TeamSlider /> */}
       <Partners />
       <Investors />

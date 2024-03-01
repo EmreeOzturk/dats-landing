@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function App() {
-  
   const [selected, setSelected] = useState(0);
   const [loading, setLoading] = useState(false);
   const [data, setData]: any = useState([]);
@@ -14,6 +13,7 @@ export default function App() {
   const [totalPage, setTotalPage] = useState(0);
   async function fetchData() {
     setLoading(true);
+    setData([]);
     try {
       let getLocation = await fetch("/api/get-geo");
       let location = await getLocation.json();
@@ -120,9 +120,9 @@ export default function App() {
                   </div>
                 ))}
               </div>
-              <div className=" flex flex-col divide-y w-full -mt-6">
+              <div className=" flex flex-col divide-y justify-between h-full w-full -mt-6">
                 {loading && (
-                  <div className="w-full h-full  flex justify-center items-center">
+                  <div className="w-full h-full mt-3 flex justify-center items-center">
                     Loading...
                   </div>
                 )}
@@ -132,7 +132,7 @@ export default function App() {
                     .map((item: any, index: number) => (
                       <div
                         key={index}
-                        className="grid grid-cols-12 w-full text-xs lg:text-sm"
+                        className="grid grid-cols-12 items-center w-full text-xs lg:text-sm"
                       >
                         <div className="p-3 col-span-1 ">#{item?.order}</div>
                         <div className="p-3 col-span-2">
@@ -153,10 +153,34 @@ export default function App() {
                           {item?.assignedBandwith}
                         </div>
                         <div className="p-3 col-span-2">
-                          {formatCoordinates(item?.lastLocation)}
+                          {item.lastCity} / {item.lastCountry}
                         </div>
                       </div>
                     ))}
+                {data.length > 0 && <div className="grid grid-cols-12 font-medium text-sm 2xl:text-base">
+                  <div className="p-3 col-span-1 ">Total:</div>
+                  <div className="p-3 col-span-2"></div>
+                  <div className="p-3 col-span-2"></div>
+                  <div className="p-3 col-span-2">
+                    {data.reduce(
+                      (acc: number, item: any) => acc + item.assignedResourceCount,
+                      0
+                    )}
+                  </div>
+                  <div className="p-3 col-span-1">
+                    {data.reduce(
+                      (acc: number, item: any) => acc + item.assignedCpuCount,
+                      0
+                    )} CPU
+                  </div>
+                  <div className="p-3 col-span-2">
+                    {data.reduce(
+                      (acc: number, item: any) => acc + item.assignedBandwith,
+                      0
+                    )} Bandwith
+                  </div>
+                  <div className="p-3 col-span-2"></div>
+                </div>}
               </div>
             </div>
             <div className="flex justify-between items-center w-full h-20  bottom-0 left-0 pb-3 px-6 absolute">

@@ -16,8 +16,9 @@ export default function Partners() {
               className="w-fit flex justify-center"
             >*/
             <Image key={item.id}
-              className="opacity-70 w-24 md:w-32 2xl:w-48 h-fit hover:opacity-100 md:saturate-0 hover:saturate-100"
+              className="opacity-70 w-24 md:w-32 2xl:w-48 max-h-[90px] hover:opacity-100 md:saturate-0 hover:saturate-100 object-contain"
               src={item.src}
+
               alt={`Partner Logo ${index + 1}`}
               width={200}
               height={60}
@@ -114,11 +115,43 @@ const partners = [
   {
     id: 17,
     link: "#",
-    src: "/images/Partners-logo/Partners-logo-19.png",
+    src: "/images/Partners-logo/Partners-logo-17.png",
   },
   {
     id: 18,
     link: "#",
     src: "/images/Partners-logo/Partners-logo-18.png",
   },
+  {
+    id: 19,
+    link: "#",
+    src: "/images/Partners-logo/coinmühendisi.png",
+  },
+  {
+    id:20,
+    link: "#",
+    src: "/images/Partners-logo/codelyzer.png",
+  },
+  {
+    id:21,
+    link: "#",
+    src: "/images/Partners-logo/ctdefense.png",
+  },
+  {
+    id:22,
+    link: "#",
+    src: "/images/Partners-logo/cyverse.png",
+  },
+  {
+    id:23,
+    link: "#",
+    src: "/images/Partners-logo/nulink.png",
+  },
+  {
+    id:24,
+    link: "#",
+    src: "/images/Partners-logo/sociapol.png",
+  },
+
+  
 ];

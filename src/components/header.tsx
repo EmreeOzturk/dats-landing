@@ -218,20 +218,20 @@ const menu = [
     title: "FAQ",
     link: "faq",
   }, */
-  {
-    id: 3,
-    title: "TEAM",
-    link: "team",
-  },
-  {
-    id: 4,
-    title: "DOCUMENT",
-    link: "https://gitbook.datsproject.io/",
-    target: "_blank",
-  },
-  {
-    id: 5,
-    title: "CONTACT",
-    link: "contact",
-  },
+    /* {
+      id: 3,
+      title: "TEAM",
+      link: "team",
+    }, */
+    {
+      id: 5,
+      title: "CONTACT",
+      link: "contact",
+    },
+    {
+      id: 4,
+      title: "DOCUMENT",
+      link: "https://gitbook.datsproject.io/",
+      target: "_blank",
+    },
 ];
