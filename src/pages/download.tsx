@@ -153,7 +153,7 @@ export default function App() {
                           {item?.assignedBandwith}
                         </div>
                         <div className="p-3 col-span-2">
-                          {item.lastCity} / {item.lastCountry}
+                          {item.lastCountry}
                         </div>
                       </div>
                     ))}
