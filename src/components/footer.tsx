@@ -12,10 +12,7 @@ export default function Footer() {
           >
             <Logo />
           </Link>
-          <p className="text-white  w-full md:w-2/3 2xl:w-[600px] text-center ">
-            DATS Web3 Solutions, Inc
-          </p>
-          <p>8 THE GRN STE D DOVER, DE 19901 USA</p>
+
           <p className="flex gap-2 md:gap-3">
             <a className="hover:text-orange-400 " href="/privacy-notice">
               Privacy Notice
