@@ -3,6 +3,7 @@ import Image from "next/image";
 import NewButton from "@/components/button";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import NewButtonTwo from "@/components/downloadbutton";
 
 export default function App() {
   const [selected, setSelected] = useState(0);
@@ -77,6 +78,14 @@ export default function App() {
           resources, streamlining operations in an innovative way.
         </p>
         <NewButton />
+
+        <div className="h-full flex flex-col items-center justify-center text-center py-10 md:pt-20 w-full max-w-[100vw]">
+          <img className="w-20" src="/images/xion-logo-white.png" alt="" />
+          <p className="w-full pt-5 md:w-5/6 max-w-[1200px] text-xs pb-6 md:pb-10 md:text-lg">
+            Start earning $DATS by registering with your email on Xion!
+          </p>
+          <NewButtonTwo />
+        </div>
         {/* <img
           className="container pt-6 md:pt-10"
           src="/destop-sofware.png"
@@ -152,35 +161,38 @@ export default function App() {
                         <div className="p-3 col-span-2">
                           {item?.assignedBandwith}
                         </div>
-                        <div className="p-3 col-span-2">
-                          {item.lastCountry}
-                        </div>
+                        <div className="p-3 col-span-2">{item.lastCountry}</div>
                       </div>
                     ))}
-                {data.length > 0 && <div className="grid grid-cols-12 font-medium text-sm 2xl:text-base">
-                  <div className="p-3 col-span-1 ">Total:</div>
-                  <div className="p-3 col-span-2"></div>
-                  <div className="p-3 col-span-2"></div>
-                  <div className="p-3 col-span-2">
-                    {data.reduce(
-                      (acc: number, item: any) => acc + item.assignedResourceCount,
-                      0
-                    )}
+                {data.length > 0 && (
+                  <div className="grid grid-cols-12 font-medium text-sm 2xl:text-base">
+                    <div className="p-3 col-span-1 ">Total:</div>
+                    <div className="p-3 col-span-2"></div>
+                    <div className="p-3 col-span-2"></div>
+                    <div className="p-3 col-span-2">
+                      {data.reduce(
+                        (acc: number, item: any) =>
+                          acc + item.assignedResourceCount,
+                        0
+                      )}
+                    </div>
+                    <div className="p-3 col-span-1">
+                      {data.reduce(
+                        (acc: number, item: any) => acc + item.assignedCpuCount,
+                        0
+                      )}{" "}
+                      CPU
+                    </div>
+                    <div className="p-3 col-span-2">
+                      {data.reduce(
+                        (acc: number, item: any) => acc + item.assignedBandwith,
+                        0
+                      )}{" "}
+                      Bandwith
+                    </div>
+                    <div className="p-3 col-span-2"></div>
                   </div>
-                  <div className="p-3 col-span-1">
-                    {data.reduce(
-                      (acc: number, item: any) => acc + item.assignedCpuCount,
-                      0
-                    )} CPU
-                  </div>
-                  <div className="p-3 col-span-2">
-                    {data.reduce(
-                      (acc: number, item: any) => acc + item.assignedBandwith,
-                      0
-                    )} Bandwith
-                  </div>
-                  <div className="p-3 col-span-2"></div>
-                </div>}
+                )}
               </div>
             </div>
             <div className="flex justify-between items-center w-full h-20  bottom-0 left-0 pb-3 px-6 absolute">
