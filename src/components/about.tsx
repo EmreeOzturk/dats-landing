@@ -12,20 +12,18 @@ export default function About() {
             Cyber Security Innovation with DePIN
           </h2>
           <p className="text-xs sm:text-sm lg:text-base font-normal ">
-            The DATS Project addresses a crucial need in the market by
-            pioneering the #DePIN category, specifically targeting Web3
-            security. Our innovative desktop application enables individuals to
-            allocate system resources seamlessly, eliminating the need for
-            additional hardware investments. This is made possible through our
-            Proof of Resource smart contract. D-HPC, which we have obtained with
-            the micro-scale system resources of our participants, addresses many
-            challenges in the field of Web3 security while ensuring the
-            unrivaled performance of the Security Audit services we have
-            developed. <br /> <br />
-            D-HPC allows us to detect security vulnerabilities before they do,
-            using the methodology of hackers but with far more system resources
-            than they have at their disposal. It also provides resilience
-            against complex and sophisticated cyber attacks.
+            Installing the DATS Desktop software is much simpler than installing
+            a game on your computer. By logging into the DePIN software of DATS
+            with Metamask or your email address, you can allocate your system
+            resources for DATS and start earning $DATS by logging into DePIN.
+            <br /> <br />
+            Moreover, thanks to our developed Proof of Resource smart contract,
+            you become the rightful owner of the system resources you allocate
+            for DATS and can track all transactions transparently. Furthermore,
+            there is no need for additional hardware investment or renting
+            virtual servers from cloud providers to join DATS and DePIN. You can
+            easily join DePIN with just a few mouse clicks without getting
+            bogged down in technical matters.
           </p>
         </div>
       </div>

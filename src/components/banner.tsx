@@ -47,10 +47,10 @@ export default function Banner() {
     <div className="h-screen w-full flex flex-col items-center gap-6 pt-20 xl:pt-24  relative">
       <h1 className="z-10 drop-shadow-md">DePIN: Cybersecurity, Redefined.</h1>
 
-      <h4 className="w-full xl:w-2/5 z-10 text-center ">
-        We are innovating #DePIN through our developed application and Proof of
-        Resource (PoR) smart contract, fortifying Web3 & Web2 against intricate
-        cyber threats.
+      <h4 className="w-full xl:w-3/5 z-10 text-center ">
+        Earning income with DePIN is now much easier. Download the DATS Desktop
+        software without struggling with technical issues and start earning
+        $DATS.
       </h4>
       {show &&
         (browser === "Chrome" || (os !== "iOS" && os !== "MacOS") ? (
