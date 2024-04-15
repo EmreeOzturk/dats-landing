@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
       mode: "dark",
     },
   });
-  return (
+  return ( 
     <ThemeProvider theme={darkTheme}>
       <Component {...pageProps} />
     </ThemeProvider>
