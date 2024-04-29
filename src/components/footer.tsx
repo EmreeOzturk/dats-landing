@@ -22,6 +22,7 @@ export default function Footer() {
               User Agreement
             </a>
           </p>
+          <p className="text-center text-s">DATS Web3 Solurions, Inc.</p>
           <p className="text-center text-s">8 THE GRN STE D DOVER, DE 19901</p>
         </div>
       </div>
