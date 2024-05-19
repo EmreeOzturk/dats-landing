@@ -20,7 +20,6 @@ export default function NewButton() {
                     className="w-full  rounded-lg border-white px-2 py-3 border-[1px] text-base md:text-lg font-medium text-white  items-center bg-none text-center flex gap-3 justify-center"
                   >
                     <p className="text-xs md:text-lg">{child.title}</p>
-                    
                   </Link>
                 ))}
               </div>
@@ -59,7 +58,7 @@ const buttonData = [
     children: [
       {
         id: 1,
-        title: "MAC OS M1",
+        title: "MAC OS M Series",
         description: "DOWNLOAD",
         addClass: "md:mb-1.5 -mt-1.5",
         svg: "/images/icons/ic_outline-apple.svg",
@@ -76,7 +75,7 @@ const buttonData = [
     ],
     description: "DOWNLOAD",
     addClass: "md:mb-1.5 -mt-1.5",
-    svg: "/images/icons/ic_outline-apple.svg"
+    svg: "/images/icons/ic_outline-apple.svg",
   },
   {
     id: 3,
