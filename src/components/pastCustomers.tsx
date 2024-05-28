@@ -2,14 +2,14 @@ import Link from "next/link";
 import Title from "./title";
 import Image from "next/image";
 
-export default function Backers() {
+export default function PastCustomers() {
   return (
     <div className="flex flex-col gap-6">
-      <Title title="Supporters" />
+      <Title title="Past Customers" />
       <div className="flex justify-center">
         <div className="max-w-[1400px] w-full grid gap-4 md:gap-6 justify-center items-center content-center grid-cols-3 md:grid-cols-5 mx-auto  pt-5">
-          {backers.map((item, index) => (
-            /*  <Link
+          {Pastcustomers.map((item, index) => (
+            /* <Link
               key={item.id}
               href="#"
               target="_blank"
@@ -31,31 +31,20 @@ export default function Backers() {
   );
 }
 
-const backers = [
+const Pastcustomers = [
   {
     id: 1,
     link: "#",
-    src: "/images/Backers/Backers-3.png",
+    src: "/images/PastCustomers/PastCustomers-1.png",
   },
   {
     id: 2,
     link: "#",
-    src: "/images/Backers/Backers-6.png",
+    src: "/images/PastCustomers/PastCustomers-2.png",
   },
   {
     id: 3,
     link: "#",
-    src: "/images/Backers/Backers-7.png",
-  },
-
-  {
-    id: 4,
-    link: "#",
-    src: "/images/Backers/Backers-4.png",
-  },
-  {
-    id: 5,
-    link: "#",
-    src: "/images/Backers/Backers-2.png",
+    src: "/images/PastCustomers/PastCustomers-3.png",
   },
 ];

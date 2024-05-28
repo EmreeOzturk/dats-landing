@@ -15,10 +15,10 @@ export default function Partners() {
               target="_blank"
               className="w-fit flex justify-center"
             >*/
-            <Image key={item.id}
+            <Image
+              key={item.id}
               className="opacity-70 w-24 md:w-32 2xl:w-48 max-h-[90px] hover:opacity-100 md:saturate-0 hover:saturate-100 object-contain"
               src={item.src}
-
               alt={`Partner Logo ${index + 1}`}
               width={200}
               height={60}
@@ -35,123 +35,111 @@ const partners = [
   {
     id: 1,
     link: "#",
-    src: "/images/Partners-logo/Partners-logo-1.png",
+    src: "/images/Partners-logo/nulink.png",
   },
   {
     id: 2,
     link: "#",
-    src: "/images/Partners-logo/Partners-logo-2.png",
+    src: "/images/Partners-logo/Partners-logo-19.png",
   },
   {
     id: 3,
     link: "#",
-    src: "/images/Partners-logo/Partners-logo-3.png",
+    src: "/images/Partners-logo/cyverse.png",
   },
   {
     id: 4,
     link: "#",
-    src: "/images/Partners-logo/Partners-logo-4.png",
+    src: "/images/Partners-logo/Partners-logo-18.png",
   },
   {
     id: 5,
     link: "#",
-    src: "/images/Partners-logo/Partners-logo-5.png",
+    src: "/images/Partners-logo/Partners-logo-4.png",
   },
   {
     id: 6,
     link: "#",
-    src: "/images/Partners-logo/Partners-logo-6.png",
+    src: "/images/Partners-logo/Partners-logo-5.png",
   },
   {
     id: 7,
     link: "#",
-    src: "/images/Partners-logo/Partners-logo-7.png",
+    src: "/images/Backers/Backers-4.png",
   },
   {
     id: 8,
     link: "#",
-    src: "/images/Partners-logo/Partners-logo-8.png",
+    src: "/images/Partners-logo/Partners-logo-7.png",
   },
   {
     id: 9,
     link: "#",
-    src: "/images/Partners-logo/Partners-logo-9.png",
+    src: "/images/Partners-logo/Partners-logo-8.png",
   },
   {
     id: 10,
     link: "#",
-    src: "/images/Partners-logo/Partners-logo-10.png",
+    src: "/images/Partners-logo/Partners-logo-9.png",
   },
   {
     id: 11,
     link: "#",
-    src: "/images/Partners-logo/Partners-logo-11.png",
+    src: "/images/Partners-logo/Partners-logo-10.png",
   },
   {
     id: 12,
     link: "#",
-    src: "/images/Partners-logo/Partners-logo-12.png",
+    src: "/images/Partners-logo/Partners-logo-11.png",
   },
   {
     id: 13,
     link: "#",
-    src: "/images/Partners-logo/Partners-logo-13.png",
+    src: "/images/Partners-logo/Partners-logo-12.png",
   },
   {
     id: 14,
     link: "#",
-    src: "/images/Partners-logo/Partners-logo-14.png",
+    src: "/images/Partners-logo/Partners-logo-13.png",
   },
   {
     id: 15,
     link: "#",
-    src: "/images/Partners-logo/Partners-logo-15.png",
+    src: "/images/Partners-logo/Partners-logo-14.png",
   },
   {
     id: 16,
     link: "#",
-    src: "/images/Partners-logo/Partners-logo-16.png",
+    src: "/images/Partners-logo/Partners-logo-15.png",
   },
   {
     id: 17,
     link: "#",
-    src: "/images/Partners-logo/Partners-logo-17.png",
+    src: "/images/Partners-logo/Partners-logo-16.png",
   },
   {
     id: 18,
     link: "#",
-    src: "/images/Partners-logo/Partners-logo-18.png",
+    src: "/images/Partners-logo/Partners-logo-17.png",
   },
   {
     id: 19,
     link: "#",
-    src: "/images/Partners-logo/coinmühendisi.png",
+    src: "/images/Partners-logo/Partners-logo-3.png",
   },
   {
-    id:20,
+    id: 20,
     link: "#",
     src: "/images/Partners-logo/codelyzer.png",
   },
   {
-    id:21,
+    id: 21,
     link: "#",
-    src: "/images/Partners-logo/ctdefense.png",
+    src: "/images/Partners-logo/Partners-logo-2.png",
   },
   {
-    id:22,
+    id: 22,
     link: "#",
-    src: "/images/Partners-logo/cyverse.png",
+    src: "/images/Partners-logo/coinmühendisi.png",
   },
-  {
-    id:23,
-    link: "#",
-    src: "/images/Partners-logo/nulink.png",
-  },
-  {
-    id:24,
-    link: "#",
-    src: "/images/Partners-logo/sociapol.png",
-  },
-
-  
 ];

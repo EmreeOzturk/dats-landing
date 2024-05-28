@@ -9,7 +9,11 @@ import "swiper/css/pagination";
 import { Keyboard, Scrollbar, Navigation, Pagination } from "swiper/modules";
 import React from "react";
 
-export default function SwiperComp({ children}: { children: React.ReactNode}) {
+export default function SwiperComp({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <Swiper
       slidesPerView={1}
@@ -44,7 +48,7 @@ export default function SwiperComp({ children}: { children: React.ReactNode}) {
       modules={[Navigation, Pagination]}
       className="!pb-14 md:!pb-16 !px-3 slider "
     >
-        {children}
+      {children}
     </Swiper>
   );
 }

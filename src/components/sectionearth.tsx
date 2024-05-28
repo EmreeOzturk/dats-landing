@@ -17,7 +17,7 @@ export default function SectionEarth() {
   return (
     <>
       <div className="w-full  flex flex-col place-content-center gap-8 md:gap-10 xl:gap-20 justify-center items-center relative h-full">
-        {(browser === "Chrome" || (os !== "iOS" && os !== "MacOS")) ? (
+        {browser === "Chrome" || (os !== "iOS" && os !== "MacOS") ? (
           <video
             className={`absolute hidden md:block invisible md:visible  transition-all -right-[80vh]  h-full w-[100vw] scale-125 z-0`}
             autoPlay
@@ -41,30 +41,33 @@ export default function SectionEarth() {
         )}
         <div className="w-full z-10">
           <h1 className="w-full xl:w-9/12 text-left font-semibold text-lg md:text-4xl z-10 ">
-            Be part of a community where your computer resources drive advanced
-            cybersecurity. Together, we create a safer digital world and share
-            the rewards of our collective success. Simple participation,
-            powerful impact.
+            Be part of DePIN community that delivers a secure Web3 experience
+            while earning{" "}
+            <span className="text-[#00F79E]"> passive income</span> with your
+            idle computing resources.
+          </h1>
+          <h1 className="w-full xl:w-9/12 text-left font-light italic text-lg md:text-4xl z-10 ">
+            Simple participation, powerful impact.
           </h1>
         </div>
 
         <div className="grid md:grid-cols-2 2xl:grid-cols-3 place-content-center !text-center gap-20 w-full z-10">
           <Card
             title="Participants"
-            description="Participants contribute to the DATS Project by downloading our application and sharing key computer resources, including CPU, GPU, and internet bandwidth. Their valuable efforts are acknowledged with rewards, ensuring the project's services are delivered effectively and efficiently."
+            description="Participants contribute to DATS by downloading our app and sharing CPU, GPU, and bandwidth. This creates distributed high power computing. (D-HPC)"
             image="/images/main-icon/team.png"
           />
         </div>
 
         <div className="grid md:grid-cols-2 2xl:grid-cols-3 place-content-center gap-8 md:gap-10 xl:gap-20 w-full z-10">
           <Card
-            title="Service Sales"
-            description="Our marketplace offers customers a range of cybersecurity services, utilizing decentralized computing power. Tasks are swiftly allocated among participants for efficient and prompt execution."
+            title="SaaS Sales"
+            description="Thanks to D-HPC, we ensure high-performance operability of the SaaS we develop."
             image="/images/main-icon/service-sales.png"
           />
           <Card
             title="Outcome"
-            description="Upon completion of a service, customers are provided with a detailed report. In addition, participants benefit by receiving 60% of the generated revenue, creating a mutually beneficial ecosystem."
+            description="Our community is rewarded with 60% of our high-performing SaaS sales revenue."
             image="/images/main-icon/outcome.png"
           />
         </div>

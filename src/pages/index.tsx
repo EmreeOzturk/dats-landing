@@ -14,20 +14,27 @@ import Advisors from "@/components/slide/advisors";
 import SectionEarth from "@/components/sectionearth";
 import FAQ from "@/components/faq";
 import MainLayout from "@/components/layout/mainLayout";
+import LiveOn from "@/components/liveOn";
+import PastCustomers from "@/components/pastCustomers";
+import BusinessModel from "@/components/BusinessModel";
 
 export default function Home() {
   return (
     <MainLayout title="Depin: security, redefined">
       <Banner />
-      <About /> 
-      <Services />
       <SectionEarth />
+      <BusinessModel />
       <FAQ />
+
+      <Services />
+
       {/* <Teams /> */}
       {/* <TeamSlider /> */}
+      <LiveOn />
       <Partners />
       <Investors />
       <Backers />
+      <PastCustomers />
       <Contact />
     </MainLayout>
   );
