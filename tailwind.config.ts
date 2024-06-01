@@ -10,9 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        brando: ['Brando', 'sans-serif'],
-        raleway: ['Raleway', 'sans-serif'],
-        "FiraCode": ["Fira Code", "monospace"],
+        brando: ['Montserrat', 'sans-serif'],
+        raleway: ['Montserrat', 'sans-serif'],
+        "FiraCode": ["Montserrat", "monospace"],
+        monserrat: ['Montserrat', 'sans-serif'],
       }
     },
   },

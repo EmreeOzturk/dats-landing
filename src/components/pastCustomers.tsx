@@ -2,14 +2,14 @@ import Link from "next/link";
 import Title from "./title";
 import Image from "next/image";
 
-export default function Backers() {
+export default function PastCustomers() {
   return (
     <div className="flex flex-col gap-6">
-      <Title title="Supporters" />
+      <Title title="Past Customers" />
       <div className="flex justify-center">
-        <div className="max-w-[1400px] w-full grid gap-4 md:gap-6 justify-center items-center content-center grid-cols-3 md:grid-cols-5 mx-auto  pt-5">
-          {backers.map((item, index) => (
-            /*  <Link
+        <div className="max-w-[1400px] w-full flex flex-wrap justify-center items-center gap-4 sm:gap-6 xl:gap-12  mx-auto  pt-5">
+          {Pastcustomers.map((item, index) => (
+            /* <Link
               key={item.id}
               href="#"
               target="_blank"
@@ -17,7 +17,7 @@ export default function Backers() {
             > */
             <Image
               key={item.id}
-              className="opacity-70 hover:opacity-100 md:saturate-0 hover:saturate-100"
+              className="opacity-70 w-24 md:w-32 2xl:w-48 max-h-[90px] hover:opacity-100 md:saturate-0 hover:saturate-100 object-contain"
               src={item.src}
               alt={`Partner Logo ${index + 1}`}
               width={200}
@@ -31,31 +31,20 @@ export default function Backers() {
   );
 }
 
-const backers = [
+const Pastcustomers = [
   {
     id: 1,
     link: "#",
-    src: "/images/Backers/Backers-3.png",
+    src: "/images/PastCustomers/PastCustomers-1.png",
   },
   {
     id: 2,
     link: "#",
-    src: "/images/Backers/Backers-6.png",
+    src: "/images/PastCustomers/PastCustomers-2.png",
   },
   {
     id: 3,
     link: "#",
-    src: "/images/Backers/Backers-7.png",
-  },
-
-  {
-    id: 4,
-    link: "#",
-    src: "/images/Backers/Backers-4.png",
-  },
-  {
-    id: 5,
-    link: "#",
-    src: "/images/Backers/Backers-2.png",
+    src: "/images/PastCustomers/PastCustomers-3.png",
   },
 ];

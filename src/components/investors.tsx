@@ -15,7 +15,8 @@ export default function Investors() {
               target="_blank"
               className="w-full flex justify-center"
             > */
-            <Image key={item.id}
+            <Image
+              key={item.id}
               className="opacity-70 hover:opacity-100 md:saturate-0 hover:saturate-100"
               src={item.src}
               alt={`Partner Logo ${index + 1}`}
@@ -34,12 +35,12 @@ const investors = [
   {
     id: 1,
     link: "#",
-    src: "/images/Investors/Investors-1.png",
+    src: "/images/Investors/Investors-2.png",
   },
   {
     id: 2,
     link: "#",
-    src: "/images/Investors/Investors-2.png",
+    src: "/images/Investors/Investors-1.png",
   },
   {
     id: 3,

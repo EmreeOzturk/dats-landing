@@ -1,10 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Raleway:wght@100;200;300;400;600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Raleway:wght@100;200;300;400;600&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 
-@face-font {
+/* @face-font {
   font-family: "Brando";
   src: url("./font/BrandonGrotesque-Regular.otf");
-}
+} */
 
 @tailwind base;
 @tailwind components;
@@ -25,7 +27,6 @@
   }
 
   p {
-
     @apply text-[12px] md:text-base text-white font-normal font-FiraCode;
   }
   .slider {
@@ -53,12 +54,13 @@ body {
 }
 
 body {
-  font-family: "Fira Code", monospace;
+  /* font-family: "Fira Code", monospace; */
+  @apply font-monserrat
 }
 
-body h1 {
+/* body h1 {
   font-family: "Raleway", sans-serif;
-}
+} */
 
 #app {
   height: 100%;
@@ -112,7 +114,7 @@ body {
   border: 1px solid #fff;
   padding: 1px !important;
   border-radius: 100%;
-  @apply scale-[0.4] !z-30 !left-[18%] !top-[93%] md:!top-[94%] md:!left-[33%] 2xl:!left-[42%];
+  @apply scale-[0.4] !z-30 !left-[18%] !top-[91%] md:!top-[91%] md:!left-[33%] 2xl:!left-[42%];
 }
 
 .swiper-button-next {
@@ -131,7 +133,7 @@ body {
   height: 72px !important;
   border: 1px solid #fff;
   border-radius: 100%;
-  @apply scale-[0.4] !z-30 !top-[93%] md:!top-[94%]  !right-[18%] md:!right-[33%] 2xl:!right-[42%];
+  @apply scale-[0.4] !z-30 !top-[91%] md:!top-[91%]  !right-[18%] md:!right-[33%] 2xl:!right-[42%];
 }
 
 .card-bg {

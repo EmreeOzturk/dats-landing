@@ -14,12 +14,13 @@ export default function FAQ() {
       id="faq"
       className="flex flex-col gap-6 xl:gap-10 items-center md:h-[800px]"
     >
-      <h2>What Makes Us Different?</h2>
-      <p className="text-center w-full xl:w-2/3">
-        The DATS Project is a unique SaaS platform, forging powerful connections
-        between individual contributors and enterprises. It's a space where
-        participants earn revenue and businesses access affordable, top-tier
-        cybersecurity solutions.
+      <h2>Frequently Asked Questions</h2>
+      <p className="text-center w-full xl:w-4/5">
+        For any questions you can't find the answer to here, you can visit our
+        <span className="text-[#00F79E]"> Telegram</span> and
+        <span className="text-[#00F79E]"> Discord</span> communities. Our
+        community managers and technical teams are looking forward to answering
+        your questions.
       </p>
       <div className="mb-5 flex flex-col md:flex-row gap-3 md:gap-10">
         <div className="flex flex-col gap-3 font-semibold w-full lg:w-1/2">
@@ -51,7 +52,7 @@ function CardFaq({ faq, togglePara, active }: any) {
     <div className="border-white/25 text-xs md:text-sm 2xl:text-base text-left  flex flex-col items-center justify-cente font-medium md:font-semibold border bg-[#0D0D0D1A]/10 backdrop-blur-sm rounded-3xl transition-all">
       <button
         type="button"
-        className={`p-4 w-full flex items-center gap-4 md:gap-4 xl:gap-6 text-left min-h-[90px] justify-between text-white-dark  ${
+        className={`p-6 w-full flex text-xl items-center gap-4 md:gap-4 xl:gap-6 text-left min-h-[90px] justify-between text-white-dark  ${
           active === faq.id.toString() ? "!text-primary" : ""
         }`}
         onClick={() => togglePara(faq.id.toString())}
@@ -99,61 +100,68 @@ const arrow = (
 
 const faqs2 = [
   {
-    id: 5,
-    question:
-      "Eliminating the need of gray services usage when purchasing cyber security services.",
-    answer:
-      "The availability of comprehensive DDOS Test services means customers no longer have to lean on the uncertain gray market for their cybersecurity needs. This move brings a safer, more ethical path to getting high-quality cybersecurity, offering peace of mind and reliable solutions away from the gray market's risks.",
-  },
-  {
     id: 6,
-    question:
-      "You can scan billions of devices connected to the Internet very quickly.",
+    question: "How does DATS efficiently use my computer's resources?",
     answer:
-      "The DATS Project's Cyber Security Service, powered by its extensive computing capabilities, can quickly scan billions of devices connected to the Internet globally. This service, fueled by participant-contributed resources, allows for the swift identification of vulnerabilities. Customers are promptly informed by DATS about any detected issues, with regular scanning intervals. This efficient process provides customers with a proactive edge in staying ahead of cyber threats.",
+      "DATS optimizes your computer's spare resources, such as storage space, internet bandwidth, and CPU power, to support DePIN protocols while minimizing the impact on your device's performance.",
   },
   {
     id: 7,
-    question:
-      "The fully on-chain system design allows us to provide evidence and transparency in our services.",
+    question: "Is my data secure with DATS?",
     answer:
-      "The resources contributed by participants to the system are meticulously recorded on the blockchain, enabling the provision of concrete proof. Customers have the flexibility to purchase computing power as needed, with the ability to review data directly on the blockchain. This approach ensures a high level of transparency in the services offered, fostering trust and clarity in every transaction.",
+      "Yes, DATS prioritizes data security and privacy. We implement industry-standard security protocols to safeguard your data and never share it with third parties.",
   },
   {
     id: 8,
-    question:
-      "Setting itself apart by repurposing idle computing power for cybersecurity, it also promotes eco-friendliness.",
+    question: "Can I earn rewards in DATS tokens by staking them?",
     answer:
-      "By redirecting idle computing power towards cybersecurity needs, this approach not only enhances digital protection but also contributes to environmental sustainability. Instead of requiring additional energy and resources for new infrastructure, it optimizes existing computing capacities, reducing the overall carbon footprint and promoting a greener approach in the tech industry.",
+      "Yes, participants have the opportunity to earn additional rewards by staking their DATS tokens within the DATS ecosystem.",
+  },
+  {
+    id: 9,
+    question: "What is the economic model behind the DATS token?",
+    answer:
+      "The DATS token operates on a buyback cycle logic, where revenues from services are used to buy DATS tokens from the market, supporting token value and rewarding users.",
+  },
+  {
+    id: 10,
+    question:
+      "What should I do if I encounter difficulties during DATS installation?",
+    answer:
+      "If you face any challenges during installation, ensure your device meets our system requirements. For further assistance, please contact our support team via the 'Contact Us' link on our website.",
   },
 ];
 const faqs1 = [
   {
     id: 1,
     question:
-      "The first Share-to-Earn based decentralized computing power marketplace focusing on the cyber security area.",
+      "Can individuals with no blockchain experience participate in DATS?",
     answer:
-      "Participants are rewarded when the system resources they offer are utilized in cybersecurity services that are subsequently sold. The extent of their rewards is carefully determined by the level and frequency of their resource usage in these services, ensuring a fair and accurate distribution of rewards in line with professional standards.",
+      "Absolutely. DATS is designed to be user-friendly, enabling anyone to participate regardless of their blockchain knowledge. Simply download our desktop application and follow the setup instructions.",
   },
   {
     id: 2,
-    question:
-      "The need for whitelists is eliminated in penetration testing services.",
+    question: "How can I begin earning with DATS?",
     answer:
-      "Traditional penetration testing often involves getting whitelists from the target's security, but this isn't enough against cybercriminals who attack with a massive number of resources. The DATS Project changes the game by using tens of thousands of sources for its Penetration Testing Service, way more than what cybercriminals typically use. This means you can spot and fix security weaknesses much sooner, staying one step ahead of potential threats.",
+      "Once you've installed the DATS desktop application, it will automatically engage in DePIN protocols, allowing you to start earning rewards in DATS tokens.",
   },
   {
     id: 3,
     question:
-      "High computing power experience without huge investment cost (for all services).",
+      "What factors influence the amount of rewards I can earn with DATS?",
     answer:
-      "By pooling the system resources of its participants, the DATS Project creates a powerful computing environment. This setup offers you the chance to use high-end cybersecurity services on a flexible pay-as-you-use basis, avoiding the heavy costs of investment, maintenance, and operation usually required for such advanced computing power.",
+      "Earnings in DATS are influenced by factors like your available resources, demand in DePIN protocols, and prevailing market conditions. We optimize resource allocation to maximize your rewards.",
   },
   {
     id: 4,
-    question:
-      "It allows us to expand into different business areas that need high computing power.",
+    question: "Does DATS support older computer systems?",
     answer:
-      "The collective computing power contributed by participants enables the DATS Project to extend its services into various high-demand computing industries. This growth not only diversifies the range of services but also increases the potential for greater earnings for both participants and the DATS Project.",
+      "Yes, DATS is designed to run efficiently on a wide range of devices, including older systems, promoting sustainability and inclusivity.",
+  },
+  {
+    id: 5,
+    question: "What is the process for installing DATS on my computer?",
+    answer:
+      "Detailed installation instructions for DATS are provided based on your device's operating system. You can access these instructions on our website's Download page.",
   },
 ];
