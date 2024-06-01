@@ -7,7 +7,7 @@ export default function PastCustomers() {
     <div className="flex flex-col gap-6">
       <Title title="Past Customers" />
       <div className="flex justify-center">
-        <div className="max-w-[1400px] w-full grid gap-4 md:gap-6 justify-center items-center content-center grid-cols-3 md:grid-cols-5 mx-auto  pt-5">
+        <div className="max-w-[1400px] w-full flex flex-wrap justify-center items-center gap-4 sm:gap-6 xl:gap-12  mx-auto  pt-5">
           {Pastcustomers.map((item, index) => (
             /* <Link
               key={item.id}
@@ -17,7 +17,7 @@ export default function PastCustomers() {
             > */
             <Image
               key={item.id}
-              className="opacity-70 hover:opacity-100 md:saturate-0 hover:saturate-100"
+              className="opacity-70 w-24 md:w-32 2xl:w-48 max-h-[90px] hover:opacity-100 md:saturate-0 hover:saturate-100 object-contain"
               src={item.src}
               alt={`Partner Logo ${index + 1}`}
               width={200}
