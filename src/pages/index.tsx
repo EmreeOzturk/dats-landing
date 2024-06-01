@@ -23,8 +23,8 @@ export default function Home() {
   return (
     <MainLayout title="Depin: security, redefined">
       <Banner />
-      <div className="grid grid-cols-2 w-full p-6 gap-20">
-        <div className="card-bg -mt-20 w-full relative text-center h-96 flex flex-col items-center justify-center gap-10 border border-white/20 rounded-xl  p-10">
+      <div className="grid lg:grid-cols-2 w-full p-6 gap-20">
+        <div className="card-bg lg:-mt-20 w-full relative text-center h-96 flex flex-col items-center justify-center gap-10 border border-white/20 rounded-xl p-10">
           <div className="card-bg absolute border border-white/20 rounded-xl px-3 flex items-center left-6 -top-6 h-12">
             Step One
           </div>
@@ -49,7 +49,7 @@ export default function Home() {
             Download desktop app 
           </Link>
         </div>
-        <div className="card-bg   w-full relative text-center h-96 flex flex-col items-center justify-center gap-10 border border-white/20 rounded-xl  p-10">
+        <div className="card-bg  w-full relative text-center h-96 flex flex-col items-center justify-center gap-10 border border-white/20 rounded-xl p-10">
           <div className="card-bg absolute border border-white/20 rounded-xl px-3 flex items-center left-6 -top-6 h-12">
             Step Two
           </div>
@@ -79,7 +79,7 @@ export default function Home() {
             (powered by XION)
           </h4>
         </div>
-        <div className="card-bg -mt-20 w-full relative text-center h-96 flex flex-col items-center justify-center gap-10 border border-white/20 rounded-xl  p-10">
+        <div className="card-bg lg:-mt-20 w-full relative text-center h-96 flex flex-col items-center justify-center gap-10 border border-white/20 rounded-xl p-10">
           <div className="card-bg absolute border border-white/20 rounded-xl px-3 flex items-center left-6 -top-6 h-12">
             Step Three
           </div>
@@ -101,7 +101,7 @@ export default function Home() {
             Bandwidth and CPU
           </h4>
         </div>
-        <div className="card-bg  w-full relative text-center h-96 flex flex-col items-center justify-center gap-10 border border-white/20 rounded-xl  p-10">
+        <div className="card-bg  w-full relative text-center h-96 flex flex-col items-center justify-center gap-10 border border-white/20 rounded-xl p-10">
           <div className="card-bg absolute border border-white/20 rounded-xl px-3 flex items-center left-6 -top-6 h-12">
             Step Four
           </div>

@@ -1,10 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Raleway:wght@100;200;300;400;600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Raleway:wght@100;200;300;400;600&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 
-@face-font {
+/* @face-font {
   font-family: "Brando";
   src: url("./font/BrandonGrotesque-Regular.otf");
-}
+} */
 
 @tailwind base;
 @tailwind components;
@@ -52,12 +54,13 @@ body {
 }
 
 body {
-  font-family: "Fira Code", monospace;
+  /* font-family: "Fira Code", monospace; */
+  @apply font-monserrat
 }
 
-body h1 {
+/* body h1 {
   font-family: "Raleway", sans-serif;
-}
+} */
 
 #app {
   height: 100%;
