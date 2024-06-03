@@ -14,7 +14,7 @@ export default function ServicesTwo() {
           </div>
           <h4>Download the DATS Project desktop app </h4>
           <Link
-            href="#"
+            href="https://datsproject.io/download"
             className="card-bg border border-white/20 rounded-xl w-full p-3"
           >
             Download desktop app 
