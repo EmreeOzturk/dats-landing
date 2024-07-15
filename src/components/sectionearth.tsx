@@ -40,7 +40,7 @@ export default function SectionEarth() {
           </>
         )}
         <div className="w-full z-10">
-          <h1 className="w-full xl:w-9/12 text-left font-semibold text-lg md:text-4xl z-10 ">
+          <h1 id="bePartOfDepin" className="w-full xl:w-9/12 text-left font-semibold text-lg md:text-4xl z-10 ">
             Be part of DePIN community that delivers a secure Web3 experience
             while earning{" "}
             <span className="text-[#00F79E]"> passive income</span> with your
