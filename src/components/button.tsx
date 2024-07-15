@@ -54,7 +54,7 @@ const buttonData = [
   },
   {
     id: 2,
-    title: "MAC OS",
+    title: "mac OS",
     children: [
       {
         id: 1,
@@ -79,7 +79,7 @@ const buttonData = [
   },
   {
     id: 3,
-    title: "LINUX",
+    title: "Linux",
     description: "DOWNLOAD",
     addClass: "md:mb-1.5 -mt-1.5",
     svg: "/images/icons/linux.svg",

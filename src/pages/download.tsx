@@ -79,21 +79,21 @@ export default function App() {
         </p>
         <NewButton />
 
-        <div className="h-full flex flex-col items-center justify-center text-center py-10 md:pt-20 w-full max-w-[100vw]">
+        {/* <div className="h-full flex flex-col items-center justify-center text-center py-10 md:pt-20 w-full max-w-[100vw]">
           <img className="w-20" src="/images/xion-logo-white.png" alt="" />
           <p className="w-full pt-5 md:w-5/6 max-w-[1200px] text-xs pb-6 md:pb-10 md:text-lg">
             Start earning $DATS by registering with your email on Xion!
           </p>
           <NewButtonTwo />
-        </div>
+        </div> */}
         {/* <img
           className="container pt-6 md:pt-10"
           src="/destop-sofware.png"
           alt=""
         /> */}
-        <h2 className=" mt-6 lg:mt-10">Leaderboard</h2>
+        {/* <h2 className=" mt-6 lg:mt-10">Leaderboard</h2> */}
 
-        <div className="flex w-full flex-col min-h-screen pb-20 p-6 gap-6 border border-white/25 card-bg rounded-xl items-center relative">
+        {/* <div className="flex w-full flex-col min-h-screen pb-20 p-6 gap-6 border border-white/25 card-bg rounded-xl items-center relative">
           <div className=" w-full lg:w-2/3 border border-white/25 grid grid-cols-2 divide-x rounded-xl">
             {["This Month", "All Time"].map((item, index) => (
               <button
@@ -219,7 +219,7 @@ export default function App() {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </MainLayout>
   );
