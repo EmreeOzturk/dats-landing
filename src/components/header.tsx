@@ -27,11 +27,10 @@ export default function Header() {
   return (
     <>
       <header
-        className={`w-full backdrop-blur-md bg-white/5 fixed left-0 top-0 flex items-center h-16 md:h-24 py-3 lg:py-5  transition-colors gap-6 justify-center  z-50 border-b-2 border-white/40  ${
-          scroll && !showMobile
-            ? "  animate__animated animate__fadeInDown animate__faster lg:shadow-sm"
-            : ""
-        }`}
+        className={`w-full backdrop-blur-md bg-white/5 fixed left-0 top-0 flex items-center h-16 md:h-24 py-3 lg:py-5  transition-colors gap-6 justify-center  z-50 border-b-2 border-white/40  ${scroll && !showMobile
+          ? "  animate__animated animate__fadeInDown animate__faster lg:shadow-sm"
+          : ""
+          }`}
       >
         <div className="flex justify-between px-3 lg:px-6 2xl:px-12 w-full h-full container items-center">
           <Link
@@ -43,50 +42,50 @@ export default function Header() {
           <ul className="flex-col w-fit  hidden lg:flex lg:relative pt-12 lg:pt-0 bottom-0 left-0 items-center justify-start lg:justify-end h-full  lg:h-auto lg:flex-row lg:mt-0 text-xs -mb-2 xl:text-base font-normal  gap-6 2xl:gap-16 transition-all">
             {path === "/"
               ? menu.map((item, index) => {
-                  return (
-                    <li
-                      key={index}
-                      className="flex justify-center items-center  shrink-0 w-fit "
-                    >
-                      {item.link.includes("http") ? (
-                        <Link
-                          href={item.link}
-                          target={"_blank"}
-                          className={`flex justify-center items-center py-3  lg:border-0 lg:hover:text-orange-400 transition-colors cursor-pointer text-center w-full font-bold `}
-                        >
-                          {item.title}
-                        </Link>
-                      ) : (
-                        <SLink
-                          activeClass="text-orange-400"
-                          to={item.link}
-                          spy={true}
-                          smooth={true}
-                          offset={-120}
-                          duration={duration}
-                          className={`flex justify-center items-center py-3  lg:border-0 lg:hover:text-orange-400 transition-colors cursor-pointer text-center w-full font-bold `}
-                        >
-                          {item.title}
-                        </SLink>
-                      )}
-                    </li>
-                  );
-                })
-              : menu.map((item, index) => {
-                  return (
-                    <li
-                      key={index}
-                      className="flex justify-center items-center  shrink-0 w-fit "
-                    >
+                return (
+                  <li
+                    key={index}
+                    className="flex justify-center items-center  shrink-0 w-fit "
+                  >
+                    {item.link.includes("http") ? (
                       <Link
-                        href={"/"}
-                        className={`flex justify-center items-center py-3 lg:border-0 lg:hover:text-orange-400 transition-colors cursor-pointer text-center w-full font-bold `}
+                        href={item.link}
+                        target={"_blank"}
+                        className={`flex justify-center items-center py-3  lg:border-0 lg:hover:text-orange-400 transition-colors cursor-pointer text-center w-full font-bold `}
                       >
                         {item.title}
                       </Link>
-                    </li>
-                  );
-                })}
+                    ) : (
+                      <SLink
+                        activeClass="text-orange-400"
+                        to={item.link}
+                        spy={true}
+                        smooth={true}
+                        offset={-120}
+                        duration={duration}
+                        className={`flex justify-center items-center py-3  lg:border-0 lg:hover:text-orange-400 transition-colors cursor-pointer text-center w-full font-bold `}
+                      >
+                        {item.title}
+                      </SLink>
+                    )}
+                  </li>
+                );
+              })
+              : menu.map((item, index) => {
+                return (
+                  <li
+                    key={index}
+                    className="flex justify-center items-center  shrink-0 w-fit "
+                  >
+                    <Link
+                      href={"/"}
+                      className={`flex justify-center items-center py-3 lg:border-0 lg:hover:text-orange-400 transition-colors cursor-pointer text-center w-full font-bold `}
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                );
+              })}
           </ul>
           <div className="hidden lg:flex items-center gap-6">
             <Link
@@ -152,43 +151,53 @@ export default function Header() {
       >
         {pathname === "/"
           ? menu.map((item, index) => {
-              return (
-                <li
-                  key={index}
-                  className="flex justify-center items-center  shrink-0 w-fit "
+            return (
+              <li
+                key={index}
+                className="flex justify-center items-center  shrink-0 w-fit "
+              >
+                <SLink
+                  onClick={() => setShowMobile(!showMobile)}
+                  activeClass="text-orange-400"
+                  to={item.link}
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={duration}
+                  className={`flex justify-center items-center py-0  lg:border-0 lg:hover:text-orange-400 transition-colors cursor-pointer text-center w-full `}
                 >
-                  <SLink
-                    onClick={() => setShowMobile(!showMobile)}
-                    activeClass="text-orange-400"
-                    to={item.link}
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={duration}
-                    className={`flex justify-center items-center py-0  lg:border-0 lg:hover:text-orange-400 transition-colors cursor-pointer text-center w-full `}
-                  >
-                    {item.title}
-                  </SLink>
-                </li>
-              );
-            })
+                  {item.title}
+                </SLink>
+              </li>
+            );
+          })
           : menu.map((item, index) => {
-              return (
-                <li
-                  key={index}
-                  className="flex justify-center items-center  shrink-0 w-fit "
+            return (
+              <li
+                key={index}
+                className="flex justify-center items-center  shrink-0 w-fit "
+              >
+                <Link
+                  href={`/`}
+                  onClick={() => setShowMobile(!showMobile)}
+                  className={`flex justify-center items-center py-0  lg:border-0 lg:hover:text-orange-400 transition-colors cursor-pointer text-center w-full `}
                 >
-                  <Link
-                    href={`/`}
-                    onClick={() => setShowMobile(!showMobile)}
-                    className={`flex justify-center items-center py-0  lg:border-0 lg:hover:text-orange-400 transition-colors cursor-pointer text-center w-full `}
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              );
-            })}
+                  {item.title}
+                </Link>
+              </li>
+            );
+          })}
         <li>
+          <Link
+            href="https://fairdrop.datsproject.io/"
+            target="_blank"
+            className=" !text-base xl:text-xl font-normal  text-black hover:bg-white  transition-colors py-2 px-6 rounded-full bg-yellow-400"
+          >
+            FairDrop
+          </Link>
+        </li>
+        <li>
+
           <Link
             href="https://dapp.datsproject.io/"
             target="_blank"
@@ -225,21 +234,21 @@ const menu = [
     title: "FAQ",
     link: "faq",
   }, */
-    /* {
-      id: 3,
-      title: "TEAM",
-      link: "team",
-    }, */
-  
-    {
-      id: 4,
-      title: "DOCUMENT",
-      link: "https://gitbook.datsproject.io/",
-      target: "_blank",
-    },
-    {
-      id: 5,
-      title: "CONTACT",
-      link: "contact",
-    },
+  /* {
+    id: 3,
+    title: "TEAM",
+    link: "team",
+  }, */
+
+  {
+    id: 4,
+    title: "DOCUMENT",
+    link: "https://gitbook.datsproject.io/",
+    target: "_blank",
+  },
+  {
+    id: 5,
+    title: "CONTACT",
+    link: "contact",
+  },
 ];
