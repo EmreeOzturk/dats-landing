@@ -8,7 +8,7 @@ export default function Banner() {
   const [showVideo, setShowVideo] = useState(false);
   const [os, setOs] = useState("Windows"); //["Windows", "MacOS", "iOS", "Android", "Linux"
   const [browser, setBrowser] = useState("Chrome"); //["Chrome", "Safari", "Diğer"]
-  console.log(os);
+  // console.log(os);
   const [show, setShow] = useState(false);
   useEffect(() => {
     setBrowser(useBrowserDetect());
