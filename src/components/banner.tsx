@@ -58,7 +58,7 @@ export default function Banner() {
       <Link
         href="https://fairdrop.datsproject.io/"
         target="_blank"
-        className=" !text-base xl:text-xl shadow-2xl shadow-yellow-500/80 font-normal z-40 hover:bg-yellow-600 transition-all cursor-pointer text-black py-2 px-6 rounded-full bg-yellow-400"
+        className=" !text-base xl:text-xl shadow-2xl shadow-yellow-500/80 font-normal z-20 hover:bg-yellow-600 transition-all cursor-pointer text-black py-2 px-6 rounded-full bg-yellow-400"
       >
         Participate in the 3% FairDrop now!
       </Link>
