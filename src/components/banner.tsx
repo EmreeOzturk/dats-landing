@@ -1,6 +1,7 @@
 import { getOS, useBrowserDetect } from "@/helpers/helpers";
 import { useEffect, useRef, useState } from "react";
 import Spline from "@splinetool/react-spline";
+import Link from "next/link";
 
 export default function Banner() {
   const videoRef: any = useRef(null);
@@ -53,13 +54,20 @@ export default function Banner() {
         Begin earing points by contributing computer resources to the DATS
         Project!
       </h4>
+
+      <Link
+        href="https://fairdrop.datsproject.io/"
+        target="_blank"
+        className=" !text-base xl:text-xl shadow-2xl shadow-yellow-500/80 font-normal z-40 hover:bg-yellow-600 transition-all cursor-pointer text-black py-2 px-6 rounded-full bg-yellow-400"
+      >
+        Participate in the 3% FairDrop now!
+      </Link>
       {show &&
         (browser === "Chrome" || (os !== "iOS" && os !== "MacOS") ? (
           <video
             ref={videoRef}
-            className={`absolute transform transition-all -bottom-[15vh] md:-bottom-[20vh] lg:-bottom-[28vh]  min-h-screen w-[100vw] md:w-[60vw] xl:w-[55vw] scale-150 md:scale-110 xl:scale-110 mx-auto animate__animated animate__fadeIn animate__faster ${
-              !showVideo && ""
-            } ${showVideo ? "md:opacity-[1]" : "opacity-100"} `}
+            className={`absolute transform transition-all -bottom-[15vh] md:-bottom-[20vh] lg:-bottom-[28vh]  min-h-screen w-[100vw] md:w-[60vw] xl:w-[55vw] scale-150 md:scale-110 xl:scale-110 mx-auto animate__animated animate__fadeIn animate__faster ${!showVideo && ""
+              } ${showVideo ? "md:opacity-[1]" : "opacity-100"} `}
             autoPlay
             loop
             muted
