@@ -6,7 +6,7 @@ export default function ServicesTwo() {
     <>
       <div className="grid -mt-24 lg:grid-cols-2 justify-center items-center m-auto lg:w-10/12 p-6 gap-20">
         <div className="card-bg lg:-mt-32  relative text-center min-h-[400px] lg:min-h-[550px] flex flex-col items-center justify-center gap-10 border border-white/20 rounded-xl p-10 lg:p-20">
-          <div className="!bg-[#070214] absolute border border-white/20 rounded-xl px-3 flex items-center left-6 -top-6 h-12">
+          <div id="stepOne" className="!bg-[#070214] absolute border border-white/20 rounded-xl px-3 flex items-center left-6 -top-6 h-12">
             Step One
           </div>
           <div className="border rounded-full border-white/20 aspect-square p-6 flex items-center justify-center">
