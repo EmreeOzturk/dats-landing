@@ -90,6 +90,13 @@ export default function Header() {
           </ul>
           <div className="hidden lg:flex items-center gap-6">
             <Link
+              href="https://fairdrop.datsproject.io/"
+              target="_blank"
+              className=" !text-base xl:text-xl font-normal text-black hover:bg-white  transition-colors py-2 px-6 rounded-full bg-yellow-400"
+            >
+              FairDrop
+            </Link>
+            <Link
               href="https://dapp.datsproject.io/"
               target="_blank"
               className=" !text-base xl:text-xl font-normal text-black hover:bg-white  transition-colors py-2 px-6 rounded-full bg-[#00E5FF]"
@@ -205,13 +212,13 @@ export default function Header() {
 const menu = [
   {
     id: 1,
-    title: "ABOUT",
-    link: "about",
+    title: "START",
+    link: "stepOne",
   },
   {
     id: 2,
-    title: "SERVICES",
-    link: "services",
+    title: "ABOUT",
+    link: "bePartOfDepin",
   },
   /* {
     id: 6,
@@ -223,15 +230,16 @@ const menu = [
       title: "TEAM",
       link: "team",
     }, */
-    {
-      id: 5,
-      title: "CONTACT",
-      link: "contact",
-    },
+  
     {
       id: 4,
       title: "DOCUMENT",
       link: "https://gitbook.datsproject.io/",
       target: "_blank",
+    },
+    {
+      id: 5,
+      title: "CONTACT",
+      link: "contact",
     },
 ];
