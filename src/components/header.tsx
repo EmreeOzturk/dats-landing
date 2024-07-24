@@ -103,12 +103,12 @@ export default function Header() {
               dApp
             </Link>
 
-            {/* <Link
+            <Link
               href="/download"
               className=" !text-base xl:text-xl font-normal text-[#10151A] hover:bg-white  transition-colors bg-[#12ED74] py-2 px-6 rounded-full"
             >
               Download
-            </Link> */}
+            </Link>
           </div>
           {showMobile ? (
             <button
@@ -206,14 +206,14 @@ export default function Header() {
             dApp
           </Link>
         </li>
-        {/* <li>
+        <li>
           <Link
             href="/download"
             className=" flex h-fit text-base xl:text-xl font-normal text-[#10151A] hover:bg-white  transition-colors bg-[#12ED74] py-2 px-6 rounded-full"
           >
             Download
           </Link>
-        </li> */}
+        </li>
       </ul>
     </>
   );
