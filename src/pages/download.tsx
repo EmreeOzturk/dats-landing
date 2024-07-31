@@ -91,9 +91,9 @@ export default function App() {
           src="/destop-sofware.png"
           alt=""
         /> */}
-        {/* <h2 className=" mt-6 lg:mt-10">Leaderboard</h2> */}
+        <h2 className=" mt-6 lg:mt-10">Leaderboard</h2>
 
-        {/* <div className="flex w-full flex-col min-h-screen pb-20 p-6 gap-6 border border-white/25 card-bg rounded-xl items-center relative">
+        <div className="flex w-full flex-col min-h-screen pb-20 p-6 gap-6 border border-white/25 card-bg rounded-xl items-center relative">
           <div className=" w-full lg:w-2/3 border border-white/25 grid grid-cols-2 divide-x rounded-xl">
             {["This Month", "All Time"].map((item, index) => (
               <button
@@ -219,7 +219,7 @@ export default function App() {
               </button>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </MainLayout>
   );
