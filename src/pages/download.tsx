@@ -25,11 +25,11 @@ export default function App() {
         const response = axios.get(`${url}/${
           // now year
           new Date().getFullYear()
-        }/${
+          }/${
           // now month
           (new Date().getMonth() + 1).toString().padStart(2, "0")
           //1 conver to 01
-        }
+          }
       `);
         const data = (await response).data;
         setData(data);
@@ -38,7 +38,7 @@ export default function App() {
       if (selected === 1) {
         const response = axios.get(`${url}/all`);
         const data = (await response).data;
-        console.log(data);
+        setTotalPage(data.length / 20);
         setData(data);
       }
     } catch (error) {
@@ -56,12 +56,13 @@ export default function App() {
     const formattedData =
       latitude && latitude !== "null"
         ? `${parseFloat(latitude).toFixed(2)};${parseFloat(longitude).toFixed(
-            2
-          )}`
+          2
+        )}`
         : "emty";
 
     return formattedData;
   }
+
   useEffect(() => {
     fetchData();
   }, [selected]);
@@ -99,9 +100,8 @@ export default function App() {
               <button
                 onClick={() => setSelected(index)}
                 key={index}
-                className={`p-3 transition-all ${
-                  selected === index ? "underline underline-offset-2 " : ""
-                } `}
+                className={`p-3 transition-all ${selected === index ? "underline underline-offset-2 " : ""
+                  } `}
               >
                 {item}
               </button>
@@ -121,9 +121,8 @@ export default function App() {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className={`p-3 first:col-span-1  ${
-                      item === "Cpu" ? "col-span-1" : "col-span-2"
-                    }`}
+                    className={`p-3 first:col-span-1  ${item === "Cpu" ? "col-span-1" : "col-span-2"
+                      }`}
                   >
                     {item}
                   </div>
