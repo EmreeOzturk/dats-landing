@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import {  Figtree } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 
-const inter = Poppins({ subsets: ["latin"], weight: ["400"] });
+const inter = Figtree({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
   title: "DATSProject",
