@@ -1,7 +1,9 @@
+import IntroSection from "@/components/intro";
+
 export default function Home() {
   return (
-    <main>
-      <h1>Home</h1>
+    <main className="">
+      <IntroSection />
     </main>
   );
 }
