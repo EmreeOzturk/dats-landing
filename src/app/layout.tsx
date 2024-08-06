@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header";
 
 const inter = Poppins({ subsets: ["latin"], weight: ["400"] });
 
@@ -16,7 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} antialiased select-none`}>
+        <Header />
+        <main className="max-w-7xl mx-auto">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
