@@ -1,10 +1,14 @@
-import Image from "next/image"
 import SectionBG from "./section-bg"
 // bg-[url('/bg.png')] bg-cover bg-right bg-no-repeat
 const FinalCTA = () => {
     return (
-        <section className="flex items-center justify-center  ">
-            <SectionBG />
+        <section className="flex items-center justify-center relative  ">
+            <div className="-z-10">
+                <SectionBG />
+            </div>
+            <div className="absolute  bottom-32 cursor-pointer opacity-0  w-2/5 mx-auto h-24">
+                butasdasd
+            </div>
             {/* <div>
                 <div className="flex flex-col items-center justify-center gap-6 text-center">
                     <h3 className="text-[14px] font-semibold text-center text-transparent bg-clip-text bg-gradient-to-l from-[#0A2141] to-[#55FFFA] border-[1.5px] border-white/15 rounded-full px-[14px] py-[4px]" >
