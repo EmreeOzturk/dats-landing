@@ -24,7 +24,6 @@ const BrandsSection = () => {
             <TranslateWrapper>
                 <LogoItemsTop />
             </TranslateWrapper>
-
         </div>
     );
 };
