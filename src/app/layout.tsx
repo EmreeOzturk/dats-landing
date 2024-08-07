@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {  Figtree } from "next/font/google";
+import { Figtree } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 
@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} antialiased select-none`}>
         <Header />
-        <main className="max-w-7xl mx-auto">
+        <main className="">
           {children}
         </main>
       </body>
