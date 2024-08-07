@@ -1,6 +1,7 @@
 import BrandsSection from "@/components/brand";
 import CTASection from "@/components/cta-how";
 import FAQSection from "@/components/faq";
+import FinalCTA from "@/components/final-cta";
 import HowSection from "@/components/how";
 import IntroSection from "@/components/intro";
 import SomeDetails from "@/components/some-details";
@@ -18,6 +19,7 @@ export default function Home() {
       <WhyUsSection />
       <SomeDetails />
       <FAQSection />
+      <FinalCTA />
     </main>
   );
 }
