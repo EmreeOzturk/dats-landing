@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const inter = Figtree({ subsets: ["latin"], weight: ["400"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <main className="">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
