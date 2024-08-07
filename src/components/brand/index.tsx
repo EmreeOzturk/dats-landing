@@ -4,7 +4,7 @@ import Peaq from "./peaq";
 
 const BrandsSection = () => {
     return (
-        <section className="bg-white py-4">
+        <section className="py-4">
             <div className="flex  overflow-hidden">
                 <TranslateWrapper>
                     <LogoItemsTop />
