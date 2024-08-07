@@ -7,7 +7,7 @@ const IntroSection = () => {
                 <h3 className="text-[14px] font-semibold text-center text-transparent bg-clip-text bg-gradient-to-l from-[#0A2141] to-[#55FFFA] border-[1.5px] border-white/15 rounded-full px-[14px] py-[4px]" >
                     START EARNING TODAY
                 </h3>
-                <h1 className="font-normal text-[#] text-[83px] tracking-tight leading-[1.04]">
+                <h1 className="font-normal  text-[83px] tracking-tight leading-[1.04]">
                     Monetize your idle computing power <span className="text-[#2CE1FE]">securely</span>
                 </h1>
                 <div className="flex items-center justify-between w-full pr-20">
