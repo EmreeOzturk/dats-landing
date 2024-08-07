@@ -2,7 +2,7 @@ import RightArrow from "../common/right-arrow"
 import Sphere from "./sphere"
 const IntroSection = () => {
     return (
-        <section className="flex items-center justify-between h-screen  ">
+        <section className="flex items-center justify-between h-screen max-w-7xl mx-auto ">
             <div className="flex flex-col items-start gap-10 justify-center max-w-xl ">
                 <h3 className="text-[14px] font-semibold text-center text-transparent bg-clip-text bg-gradient-to-l from-[#0A2141] to-[#55FFFA] border-[1.5px] border-white/15 rounded-full px-[14px] py-[4px]" >
                     START EARNING TODAY
