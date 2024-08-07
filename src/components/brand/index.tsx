@@ -12,7 +12,7 @@ import Hypersphere from "./hypersphere";
 import Stratos from "./stratos";
 const BrandsSection = () => {
     return (
-        <div className="flex items-center justify-center overflow-hidden relative ">
+        <div className="flex items-center justify-center overflow-hidden relative -my-12">
             <div className="w-52 h-20 left-0 bg-gradient-to-r from-black via-black to-transparent z-10 absolute" />
             <div className="w-52 h-20 right-0 bg-gradient-to-l from-black via-black to-transparent z-10 absolute" />
             <TranslateWrapper>
