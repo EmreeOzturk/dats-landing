@@ -4,7 +4,7 @@ const WhySection = () => {
     return (
         <section className="flex flex-col items-center justify-between h-full max-w-7xl mx-auto ">
             <div className="flex  items-center justify-between ">
-                <div className="w-1/2 flex items-center justify-center">
+                <div className="w-1/2 flex items-start justify-start">
                     <Sphere />
                 </div>
                 <div className="flex flex-col items-start gap-6 justify-center max-w-xl  w-1/2">
@@ -34,7 +34,6 @@ const WhySection = () => {
                     </div>
                 </div>
             </div>
-
         </section>
     )
 }
