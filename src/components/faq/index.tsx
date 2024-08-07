@@ -12,7 +12,7 @@ const FAQSection = () => {
             <p className='text-center text-[#f0f0f0bb] mb-12'>
                 For any questions you can&apos;t find the answer to here, you can visit <br /> our Telegram and Discord communities.
             </p>
-                <Faqs />
+            <Faqs />
         </section>
     )
 }
