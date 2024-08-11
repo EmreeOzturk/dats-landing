@@ -95,27 +95,53 @@ const QUESTIONS = {
         {
             question: "Can individuals with no blockchain experience participate in DATS?",
             answer:
-                "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempora quasi eligendi distinctio, mollitia porro repudiandae modi consectetur consequuntur perferendis!",
+                "Absolutely. DATS is designed to be user-friendly, enabling anyone to participate regardless of their blockchain knowledge. Simply download our desktop application and follow the setup instructions.",
         },
         {
             question: "How can I begin earning with DATS? ",
             answer:
-                "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempora quasi eligendi distinctio, mollitia porro repudiandae modi consectetur consequuntur perferendis!",
+                "Once you've installed the DATS desktop application, it will automatically engage in DePIN protocols, allowing you to start earning rewards in DATS tokens.",
         },
         {
             question: "What factors influence the amount of rewards I can earn with DATS?",
             answer:
-                "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempora quasi eligendi distinctio, mollitia porro repudiandae modi consectetur consequuntur perferendis!",
+                "Earnings in DATS are influenced by factors like your available resources, demand in DePIN protocols, and prevailing market conditions. We optimize resource allocation to maximize your rewards.",
         },
         {
             question: "Does DATS support older computer system",
             answer:
-                "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempora quasi eligendi distinctio, mollitia porro repudiandae modi consectetur consequuntur perferendis!",
+                "Yes, DATS is designed to run efficiently on a wide range of devices, including older systems, promoting sustainability and inclusivity.",
         },
         {
-            question: "What is the process for installing DATS on my computer ",
+            question: "What is the process for installing DATS on my computer",
             answer:
                 "Detailed installation instructions for DATS are provided based on your device's operating system. You can access these instructions on our website's Download page.",
+        },
+        {
+            question: "How does DATS efficiently use my computer's resources?",
+            answer:
+                "DATS optimizes your computer's spare resources, such as storage space, internet bandwidth, and CPU power, to support DePIN protocols while minimizing the impact on your device's performance.",
+        },
+        {
+            question: "Is my data secure with DATS?",
+            answer:
+                "Yes, DATS prioritizes data security and privacy. We implement industry-standard security protocols to safeguard your data and never share it with third parties.",
+        },
+        {
+            question: "Can I earn rewards in DATS tokens by staking them?",
+            answer:
+                "Yes, participants have the opportunity to earn additional rewards by staking their DATS tokens within the DATS ecosystem.",
+        },
+        
+        {
+            question: "What is the economic model behind the DATS token?",
+            answer:
+                "The DATS token operates on a buyback cycle logic, where revenues from services are used to buy DATS tokens from the market, supporting token value and rewarding users.",
+        },
+        {
+            question: "What should I do if I encounter difficulties during DATS installation?",
+            answer:
+                "If you face any challenges during installation, ensure your device meets our system requirements. For further assistance, please contact our support team via the 'Contact Us' link on our website.",
         },
     ],
 };
