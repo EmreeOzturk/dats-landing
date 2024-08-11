@@ -56,7 +56,6 @@ const LogoItemsTop = () => (
         <Iotex />
         <Nulink />
         <BnbChain />
-        <Coinbase />
         <Crypto />
         <Kr1 />
         <Hypersphere />
