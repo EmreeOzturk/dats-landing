@@ -25,18 +25,18 @@ const SomeDetails = () => {
             <div className="flex items-center justify-between w-full pt-32 pl-16">
                 <div className="flex flex-col  items-start gap-4 justify-center  w-full">
                     <h2 className="font-normal text-[48px] tracking-tight leading-snug">
-                        Closing exciting <br />statement
+                        Download DATS App <br /> to your computer!
                     </h2>
-                    <h3 className="font-normal text-[#f0f0f0bb] text-[18px] tracking-tight leading-loose">
+                    {/* <h3 className="font-normal text-[#f0f0f0bb] text-[18px] tracking-tight leading-loose">
                         Why are we doing what we doing and how
-                    </h3>
+                    </h3> */}
                     <button className="flex items-center justify-center gap-4 mt-10 bg-[#EAEAEA] text-base text-black font-semibold rounded-full py-[10px] px-[22px] ">
                         Get Started Now <RightArrow color="black" />
                     </button>
                 </div>
                 <div className="flex items-center justify-center pt-12 w-full gap-8">
                     <DetailCard kind="revenues" />
-                    <DetailCard kind="dats"/>
+                    <DetailCard kind="dats" />
                 </div>
             </div>
         </section>

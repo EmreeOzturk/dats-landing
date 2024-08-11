@@ -16,20 +16,20 @@ const WhySection = () => {
                         powerful impact
                     </h2>
                     <h3 className="font-normal text-[#f0f0f0bb] text-[18px] tracking-tight leading-loose">
-                        DATS project leverages powerful something and blockchain <br /> technology to provide the service you need XX.
+                        DATS, <br />
+                        Revolutionizing cybersecurity by leveraging DePIN and blockchain technology.
                     </h3>
                     <div className="flex items-start justify-between w-full pt-12 ">
                         <div className="flex flex-col items-start justify-center gap-4">
-                            <h4 className="font-semibold">Something about safety</h4>
+                            <h4 className="font-semibold">Safer, Thanks to You!</h4>
                             <p className="w-[90%] text-[#f0f0f0bb] leading-[1.8]">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                You can be part of the security revolution by contributing the idle system resources of your computer to the distributed computing power needed by the cybersecurity industry.
                             </p>
                         </div>
                         <div className="flex flex-col items-start justify-center gap-4">
-                            <h4 className="font-semibold">Something about empowerment</h4>
+                            <h4 className="font-semibold">Greener, Thanks to You!</h4>
                             <p className="w-[90%] text-[#f0f0f0bb] leading-[1.8]">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                            </p>
+                            High-performance computing is created using your existing system resources, with no additional carbon emissions required. With this eco-friendly approach, we envision a greener world for the future.                            </p>
                         </div>
                     </div>
                 </div>

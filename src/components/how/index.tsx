@@ -9,10 +9,10 @@ const HowSection = () => {
                 WHY WE ARE SPECIAL
             </h3>
             <h4 className='text-center text-[48px]'>
-                How DATS Works
+                How Does DATS Work?
             </h4>
             <p className='text-center text-[#f0f0f0bb] mb-12'>
-                Some introduction text here giving s short summary of how everything works, <br />why is it that powerful, why is it better than others
+                Our AI-powered, modular SaaS simplifies security audit operations, ensuring that the Web3 ecosystem <br /> and Web2 businesses stay one step ahead of hackers.
             </p>
             <div className='flex items-center justify-center relative  w-full'>
                 <WideCircle />

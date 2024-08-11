@@ -7,7 +7,7 @@ const FinalCTA = () => {
                 <SectionBG />
             </div>
             <div className="absolute  bottom-32 cursor-pointer opacity-0  w-2/5 mx-auto h-24">
-                butasdasd
+                button
             </div>
             {/* <div>
                 <div className="flex flex-col items-center justify-center gap-6 text-center">
