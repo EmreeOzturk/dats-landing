@@ -7,9 +7,10 @@ import {
     DropdownMenuItem
 } from "@/components/ui/dropdown-menu"
 import Link from "next/link";
-import Leaderboard from "@/components/download/leaderboard-server";
+import LeaderboardServer from "@/components/download/leaderboard-server";
 import { Suspense } from "react";
 import Spinner from "@/components/download/loading-spinner";
+import Wrapper from "@/components/download/leaderboard-wrapper";
 const DownloadPage = () => {
     return (
         <section className="flex items-center justify-center pt-52  max-w-7xl mx-auto relative flex-col">
@@ -92,9 +93,14 @@ const DownloadPage = () => {
                 </div>
             </div>
 
-            <Suspense fallback={<Spinner />}>
-                <Leaderboard />
-            </Suspense>
+            <Wrapper>
+                <Suspense fallback={<Spinner />}>
+                    <LeaderboardServer />
+                </Suspense>
+            </Wrapper>
+
+
+
         </section>
     )
 }
