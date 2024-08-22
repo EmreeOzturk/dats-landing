@@ -10,7 +10,7 @@ import Link from "next/link";
 import LeaderboardServer from "@/components/download/leaderboard-server";
 import { Suspense } from "react";
 import Spinner from "@/components/download/loading-spinner";
-import Wrapper from "@/components/download/leaderboard-wrapper";
+import LeaderboardButtons from "@/components/download/leaderboard-buttons";
 const DownloadPage = () => {
     return (
         <section className="flex items-center justify-center pt-52  max-w-7xl mx-auto relative flex-col">
@@ -92,15 +92,11 @@ const DownloadPage = () => {
                     </div>
                 </div>
             </div>
-
-            <Wrapper>
-                <Suspense fallback={<Spinner />}>
-                    <LeaderboardServer />
-                </Suspense>
-            </Wrapper>
-
-
-
+            <h2 className='text-zinc-300 font-bold text-[3.5rem] tracking-wider mt-20 '>Leaderboard</h2>
+            <LeaderboardButtons />
+            <Suspense fallback={<Spinner />}>
+                <LeaderboardServer />
+            </Suspense>
         </section>
     )
 }
