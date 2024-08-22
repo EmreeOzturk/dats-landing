@@ -4,7 +4,7 @@ import { MdOutlineMail } from "react-icons/md";
 import Logo from "../header/logo";
 const Footer = () => {
     return (
-        <section className="flex flex-col  items-center justify-between gap-6 overflow-hidden max-w-7xl mx-auto pt-32 pb-12">
+        <section id='contact' className="flex flex-col  items-center justify-between gap-6 overflow-hidden max-w-7xl mx-auto pt-32 pb-12">
             <div className="w-full flex items-center justify-between">
                 <div className="w-1/2 flex items-start justify-start gap-60">
                     <div className="flex flex-col  items-start justify-center">
