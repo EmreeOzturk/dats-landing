@@ -51,6 +51,8 @@ const DownloadPage = async () => {
         <section className="flex items-center justify-center pt-52  max-w-7xl mx-auto relative flex-col">
             <div className="absolute top-52 blur-[250px] left-0 w-96 h-52 bg-gradient-to-r from-[#6bfbe8] to-[#0088ff] z-[-1]" />
             <div className="absolute bottom-72 blur-[250px] right-0 w-96 h-52 bg-gradient-to-r from-[#5fc4ff] to-[#03a7ee] z-[-1]" />
+            <div className="absolute top-72 blur-[250px] right-0 w-96 h-52 bg-gradient-to-r from-[#5fc4ff] to-[#03a7ee] z-[-1]" />
+            <div className="absolute bottom-20 blur-[250px] left-0 w-96 h-52 bg-gradient-to-r from-[#5fc4ff] to-[#03a7ee] z-[-1]" />
             <div className='flex items-center justify-center flex-col text-center mx-auto'>
                 <h1 className='text-zinc-300 font-bold text-[3.5rem] tracking-wider'>
                     DATS Desktop Software</h1>
