@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { NAVBARMENU } from "@/lib/consts";
 import RightArrow from "../common/right-arrow";
 const Navbar = () => {
@@ -15,10 +16,12 @@ const Navbar = () => {
                     dApps
                     <RightArrow color="black" />
                 </button>
-                <button className="text-white border border-white/15 rounded-full py-[10px] px-[22px] flex items-center justify-center gap-4">
-                    Download
-                    <RightArrow color="white" />
-                </button>
+                <Link href="/download" >
+                    <button className="text-white border border-white/15 rounded-full py-[10px] px-[22px] flex items-center justify-center gap-4">
+                        Download
+                        <RightArrow color="white" />
+                    </button>
+                </Link>
             </div>
         </div>
     )
