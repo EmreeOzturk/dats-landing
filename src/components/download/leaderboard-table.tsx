@@ -119,7 +119,7 @@ export function DataTableDemo({ data }: { data: LeaderboardDataItem[] }) {
     })
 
     return (
-        <div className="w-[105%]">
+        <div className="w-full">
             <div className="flex items-center py-4">
                 <Input
                     placeholder="Filter by address"
