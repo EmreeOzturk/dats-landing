@@ -3,7 +3,7 @@ import { NAVBARMENU } from "@/lib/consts";
 import RightArrow from "../common/right-arrow";
 const Navbar = () => {
     return (
-        <div className="w-full flex items-center justify-between ">
+        <div className="w-full flex items-center justify-between z-10 ">
             <ul className="flex items-center justify-center gap-10 text-[#f0f0f098] ">
                 {NAVBARMENU.map((item) => (
                     <li key={item.id} className="hover:text-white font-normal transition-all">
