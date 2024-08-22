@@ -6,9 +6,11 @@ const Navbar = () => {
         <div className="w-full flex items-center justify-between z-10 ">
             <ul className="flex items-center justify-center gap-10 text-[#f0f0f098] ">
                 {NAVBARMENU.map((item) => (
-                    <li key={item.id} className="hover:text-white font-normal transition-all">
-                        {item.name}
-                    </li>
+                    <Link key={item.id} href={item.href}>
+                        <li className="hover:text-white font-normal transition-all cursor-pointer">
+                            {item.name}
+                        </li>
+                    </Link>
                 ))}
             </ul>
             <div className="flex items-center justify-center gap-8">
