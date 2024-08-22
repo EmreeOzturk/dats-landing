@@ -11,18 +11,18 @@ const Footer = () => {
                     <div className="flex flex-col  items-start justify-center">
                         <h5 className="text-[#f0f0f098]">QUICK LINKS</h5>
                         <div className="flex flex-col items-start justify-start gap-4 mt-12">
-                            <Link href="#howworks">
+                            <Link href="/#howworks">
                                 <h6>How it works</h6>
                             </Link>
-                            <Link href="#about">
+                            <Link href="/#about">
                                 <h6>About DATS</h6>
                             </Link>
 
-                            <Link href="#faq">
+                            <Link href="/#faq">
                                 <h6>FAQ</h6>
                             </Link>
 
-                            <Link href="#contact">
+                            <Link href="/#contact">
                                 <h6>Get in touch</h6>
                             </Link>
                         </div>
