@@ -3,7 +3,7 @@ import Illustration from "./illustration"
 
 const WhyUsSection = () => {
     return (
-        <section className="flex pt-12 flex-col items-center justify-between h-full max-w-7xl mx-auto pb-12">
+        <section id='about' className="flex pt-12 flex-col items-center justify-between h-full max-w-7xl mx-auto pb-12">
             <div className="flex  items-center justify-between ">
                 <div className="flex flex-col items-start gap-6 justify-center max-w-xl  w-1/2">
                     <h3 className="text-[14px] font-semibold text-center text-transparent bg-clip-text bg-gradient-to-l from-[#0A2141] to-[#55FFFA] border-[1.5px] border-white/15 rounded-full px-[14px] py-[4px]" >
