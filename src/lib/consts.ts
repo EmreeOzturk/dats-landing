@@ -3,22 +3,22 @@ import { MenuItem } from "./types";
 export const NAVBARMENU = [
   {
     name: "How it works",
-    href: "#",
+    href: "#howworks",
     id: 1,
   },
   {
     name: "About DATS",
-    href: "#",
+    href: "#about",
     id: 2,
   },
   {
     name: "FAQ",
-    href: "#",
+    href: "#faq",
     id: 3,
   },
   {
     name: "Contact",
-    href: "#",
+    href: "#contact",
     id: 4,
   },
 ] as MenuItem[];
