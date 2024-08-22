@@ -12,10 +12,12 @@ const Navbar = () => {
                 ))}
             </ul>
             <div className="flex items-center justify-center gap-8">
-                <button className="bg-white text-black rounded-full font-semibold py-[10px] px-[22px] flex items-center justify-center gap-4">
-                    dApps
-                    <RightArrow color="black" />
-                </button>
+                <Link href="https://dapp.datsproject.io/" target="_blank" >
+                    <button className="bg-white text-black rounded-full font-semibold py-[10px] px-[22px] flex items-center justify-center gap-4">
+                        dApps
+                        <RightArrow color="black" />
+                    </button>
+                </Link>
                 <Link href="/download" >
                     <button className="text-white border border-white/15 rounded-full py-[10px] px-[22px] flex items-center justify-center gap-4">
                         Download
