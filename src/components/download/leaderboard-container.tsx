@@ -1,25 +1,20 @@
 "use client"
 
-import { useState } from 'react'
 import LeaderboardButtons from './leaderboard-buttons'
 import { DataTableDemo } from './leaderboard-table'
 import { LeaderboardDataItem } from '@/lib/types'
 import { motion } from 'framer-motion'
+import { useLeaderBoardStore } from '@/store/useLeaderBoardStore'
 const LeaderboardContainer = (
     { data, montlyData }: { data: LeaderboardDataItem[], montlyData: LeaderboardDataItem[] }
 ) => {
-    const [selected, setSelected] = useState("This Month")
-
+    const selected = useLeaderBoardStore(state => state.selected)
     return (
         <div className='min-h-96 w-full'>
-            <LeaderboardButtons
-                selected={selected}
-                setSelected={setSelected}
-            />
             {
-                selected === "This Month" &&
+                selected === "All Time" &&
                 <motion.div
-                    initial={{ opacity: 0  }}
+                    initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8 }}
@@ -28,10 +23,10 @@ const LeaderboardContainer = (
                 </motion.div>
             }
             {
-                selected === "This Week" &&
+                selected === "This Month" &&
                 <motion.div
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1}}
+                    animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8 }}
 
