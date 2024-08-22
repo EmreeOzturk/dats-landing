@@ -10,7 +10,7 @@ import WhyUsSection from "@/components/why-us";
 
 export default function Home() {
   return (
-    <main >
+    <main>
       <IntroSection />
       <BrandsSection />
       <WhySection />
