@@ -1,7 +1,5 @@
 import { IoLogoWindows } from "react-icons/io";
 import { FaLinux, FaApple, FaChevronDown } from "react-icons/fa";
-import type { LeaderboardDataItem } from "@/lib/types";
-import { LEADERBOARDALLTIMEURL, LEADERBOARDMONTHLYURL } from "@/lib/consts";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -9,35 +7,10 @@ import {
     DropdownMenuItem
 } from "@/components/ui/dropdown-menu"
 import Link from "next/link";
-import LeaderboardContainer from "@/components/download/leaderboard-container";
-const DownloadPage = async () => {
-
-    const fetchLeaderboardData = async () => {
-        const response = await fetch(LEADERBOARDALLTIMEURL, {
-            cache: "no-store",
-        });
-        if (response.ok) {
-            const data = await response.json();
-            return data as LeaderboardDataItem[];
-        }
-    }
-
-    const fetchLeaderboardDataThisMonth = async () => {
-        const response = await fetch(LEADERBOARDMONTHLYURL + new Date().getFullYear() + "/" + (new Date().getMonth() + 1).toString().padStart(2, "0"), {
-            cache: "no-store",
-        });
-        if (response.ok) {
-            const data = await response.json();
-            return data as LeaderboardDataItem[];
-
-        }
-    }
-
-    const leaderboardData = await fetchLeaderboardData();
-    const leaderboardDataThisMonth = await fetchLeaderboardDataThisMonth();
-
-    const [allTimeData, montlyData] = await Promise.all([leaderboardData, leaderboardDataThisMonth]);
-
+import Leaderboard from "@/components/download/leaderboard-server";
+import { Suspense } from "react";
+import Spinner from "@/components/download/loading-spinner";
+const DownloadPage = () => {
     return (
         <section className="flex items-center justify-center pt-52  max-w-7xl mx-auto relative flex-col">
             <div className="absolute top-52 blur-[250px] left-0 w-96 h-52 bg-gradient-to-r from-[#6bfbe8] to-[#0088ff] z-[-1]" />
@@ -119,14 +92,9 @@ const DownloadPage = async () => {
                 </div>
             </div>
 
-            <div className='flex items-center justify-center flex-col text-center mx-auto w-full mt-14'>
-                <h2 className='text-zinc-300 font-bold text-[3.5rem] tracking-wider'>Leaderboard</h2>
-                <LeaderboardContainer
-                    data={allTimeData as LeaderboardDataItem[]}
-                    montlyData={montlyData as LeaderboardDataItem[]}
-                />
-            </div>
-
+            <Suspense fallback={<Spinner />}>
+                <Leaderboard />
+            </Suspense>
         </section>
     )
 }
