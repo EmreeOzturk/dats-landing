@@ -13,32 +13,23 @@ import LeaderboardContainer from "@/components/download/leaderboard-container";
 const DownloadPage = async () => {
 
     const fetchLeaderboardData = async () => {
-        try {
-            const response = await fetch(LEADERBOARDALLTIMEURL, {
-                cache: "no-store",
-            });
-            if (response.ok) {
-                const data = await response.json();
-                return data as LeaderboardDataItem[];
-            }
-        } catch (error) {
-            console.error("Error fetching leaderboard data", error);
-            return [];
+        const response = await fetch(LEADERBOARDALLTIMEURL, {
+            cache: "no-store",
+        });
+        if (response.ok) {
+            const data = await response.json();
+            return data as LeaderboardDataItem[];
         }
     }
 
     const fetchLeaderboardDataThisMonth = async () => {
-        try {
-            const response = await fetch(LEADERBOARDMONTHLYURL + new Date().getFullYear() + "/" + (new Date().getMonth() + 1).toString().padStart(2, "0"), {
-                cache: "no-store",
-            });
-            if (response.ok) {
-                const data = await response.json();
-                return data as LeaderboardDataItem[];
-            }
-        } catch (error) {
-            console.error("Error fetching leaderboard data", error);
-            return [];
+        const response = await fetch(LEADERBOARDMONTHLYURL + new Date().getFullYear() + "/" + (new Date().getMonth() + 1).toString().padStart(2, "0"), {
+            cache: "no-store",
+        });
+        if (response.ok) {
+            const data = await response.json();
+            return data as LeaderboardDataItem[];
+
         }
     }
 
