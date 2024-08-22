@@ -22,3 +22,7 @@ export const NAVBARMENU = [
     id: 4,
   },
 ] as MenuItem[];
+
+
+export const LEADERBOARDALLTIMEURL = "https://report.datsproject.io/leader-board/all";
+export const LEADERBOARDMONTHLYURL = "https://report.datsproject.io/leader-board/";
