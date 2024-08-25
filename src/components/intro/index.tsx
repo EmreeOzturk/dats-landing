@@ -1,3 +1,4 @@
+import Link from "next/link"
 import RightArrow from "../common/right-arrow"
 import Sphere from "./sphere"
 const IntroSection = () => {
@@ -11,9 +12,11 @@ const IntroSection = () => {
                     Monetize your idle computing power <span className="text-[#2CE1FE]">securely</span>
                 </h1>
                 <div className="flex items-center justify-between w-full pr-20">
-                    <button className="flex items-center justify-center gap-4 bg-[#EAEAEA] text-base text-black font-semibold rounded-full py-[10px] px-[22px] ">
-                        Get Started Today <RightArrow color="black" />
-                    </button>
+                    <Link href="/#steps">
+                        <button className="flex items-center justify-center gap-4 bg-[#EAEAEA] text-base text-black font-semibold rounded-full py-[10px] px-[22px] ">
+                            Get Started Today <RightArrow color="black" />
+                        </button>
+                    </Link>
                     <h4 className="w-[240px] font-normal text-[#f0f0f0bb] ">
                         A secure Web3 experience <br /> while earning passive income
                     </h4>

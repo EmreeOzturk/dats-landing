@@ -62,7 +62,7 @@ const Footer = () => {
                                 <Link href='https://github.com/datsproject' >
                                     <FiGithub size={24} />
                                 </Link>
-                                <Link href='/' >
+                                <Link href='mailto:hello@datsproject.io'>
                                     <MdOutlineMail size={24} />
                                 </Link>
                             </div>

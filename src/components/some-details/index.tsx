@@ -1,3 +1,4 @@
+import Link from "next/link"
 import RightArrow from "../common/right-arrow"
 import DetailCard from "./detail-card"
 import Ticker from "./ticker"
@@ -30,9 +31,11 @@ const SomeDetails = () => {
                     {/* <h3 className="font-normal text-[#f0f0f0bb] text-[18px] tracking-tight leading-loose">
                         Why are we doing what we doing and how
                     </h3> */}
-                    <button className="flex items-center justify-center gap-4 mt-10 bg-[#EAEAEA] text-base text-black font-semibold rounded-full py-[10px] px-[22px] ">
-                        Get Started Now <RightArrow color="black" />
-                    </button>
+                    <Link href="/download">
+                        <button className="flex items-center justify-center gap-4 mt-10 bg-[#EAEAEA] text-base text-black font-semibold rounded-full py-[10px] px-[22px] ">
+                            Get Started Now <RightArrow color="black" />
+                        </button>
+                    </Link>
                 </div>
                 <div className="flex items-center justify-center pt-12 w-full gap-8">
                     <DetailCard kind="revenues" />
