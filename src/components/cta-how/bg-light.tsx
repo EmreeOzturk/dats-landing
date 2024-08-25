@@ -1,6 +1,6 @@
 const BGLight = () => {
     return (
-        <div className="absolute bottom-0 ">
+        <div className="absolute bottom-0  -z-10">
             <svg width="274" height="220" viewBox="0 0 274 220" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_f_1_1955)">
                     <ellipse cx="242.5" cy="242" rx="108.5" ry="108" fill="#00DDDD" />
