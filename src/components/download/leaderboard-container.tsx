@@ -19,7 +19,7 @@ const LeaderboardContainer = (
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8 }}
                     className="w-full">
-                    <DataTableDemo data={montlyData as LeaderboardDataItem[]} />
+                    <DataTableDemo data={data as LeaderboardDataItem[]} />
                 </motion.div>
             }
             {
@@ -31,10 +31,9 @@ const LeaderboardContainer = (
                     transition={{ duration: 0.8 }}
 
                     className="w-full">
-                    <DataTableDemo data={data as LeaderboardDataItem[]} />
+                    <DataTableDemo data={montlyData as LeaderboardDataItem[]} />
                 </motion.div>
             }
-
         </div>
     )
 }
