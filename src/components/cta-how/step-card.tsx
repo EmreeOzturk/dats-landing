@@ -4,6 +4,7 @@ import ChartIcon from "./chart-icon"
 import DownloadIcon from "./download-icon"
 import MetamaskIcon from "./metamask-icon"
 import TollIcon from "./toll-icon"
+import Link from 'next/link'
 
 type StepCardProps = {
     step: number,
@@ -15,7 +16,7 @@ const StepCard: React.FC<StepCardProps> = (
 ) => {
     return (
         <div className="border overflow-hidden relative flex flex-col justify-between items-start pb-6 rounded-2xl h-[300px] w-[275px] ">
-            <BGLight />
+                <BGLight />
             <div className="flex items-center justify-start w-full pt-4 h-2/5">
                 {
                     step === 1 ? <DownloadIcon /> :
@@ -29,7 +30,7 @@ const StepCard: React.FC<StepCardProps> = (
                 {
                     step === 1 ?
                         <>
-                            Download the DATS <br /> Project desktop app <span className='underline font-bold'>Download now</span>
+                            Download the DATS <br /> Project desktop app <Link href="/download" className='underline font-bold z-40 '>Download now</Link>
                         </> :
                         step === 2 ?
                             <>
