@@ -1,3 +1,4 @@
+import Link from "next/link"
 import SectionBG from "./section-bg"
 // bg-[url('/bg.png')] bg-cover bg-right bg-no-repeat
 const FinalCTA = () => {
@@ -6,9 +7,9 @@ const FinalCTA = () => {
             <div className="-z-10">
                 <SectionBG />
             </div>
-            <div className="absolute  bottom-32 cursor-pointer opacity-0  w-2/5 mx-auto h-24">
-                button
-            </div>
+            <Link href="/download" className="absolute   bottom-32 cursor-pointer opacity-0  bg-orange-200 w-1/5 mx-auto h-24">
+                    button
+            </Link>
             {/* <div>
                 <div className="flex flex-col items-center justify-center gap-6 text-center">
                     <h3 className="text-[14px] font-semibold text-center text-transparent bg-clip-text bg-gradient-to-l from-[#0A2141] to-[#55FFFA] border-[1.5px] border-white/15 rounded-full px-[14px] py-[4px]" >
