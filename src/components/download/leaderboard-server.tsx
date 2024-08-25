@@ -25,7 +25,7 @@ const Leaderboard = async () => {
     const leaderboardDataThisMonth = await fetchLeaderboardDataThisMonth();
     const [allTimeData, montlyData] = await Promise.all([leaderboardData, leaderboardDataThisMonth]);
     return (
-        <div className='flex items-center justify-center flex-col text-center mx-auto w-full '>
+        <div className='flex items-center flex-col justify-center  text-center mx-auto w-full '>
             <LeaderboardContainer
                 data={allTimeData as LeaderboardDataItem[]}
                 montlyData={montlyData as LeaderboardDataItem[]}
