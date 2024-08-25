@@ -222,6 +222,14 @@ export function DataTableDemo({ data }: { data: LeaderboardDataItem[] }) {
                     </TableBody>
                 </Table>
             </div>
+            <div className="flex items-center justify-center space-x-2 py-4">
+                <p>
+                    Total CPU: {data.reduce((acc, item) => acc + item.assignedCpuCount, 0)}
+                </p>
+                <p>
+                    Total Bandwidth: {data.reduce((acc, item) => acc + item.assignedBandwith, 0)}
+                </p>
+            </div>
             <div className="flex items-center justify-end space-x-2 py-4">
                 <div>
                     <span className="text-zinc-300">
