@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased select-none`}>
+      <body className={`${inter.className} antialiased select-none overflow-x-hidden`}>
         <Header />
         {children}
         <Footer />
