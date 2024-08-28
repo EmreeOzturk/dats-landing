@@ -3,6 +3,7 @@ import { FiGithub } from "react-icons/fi";
 import { MdOutlineMail } from "react-icons/md";
 import Link from "next/link";
 import Logo from "../header/logo";
+import ContactForm from "./contact-form";
 const Footer = () => {
     return (
         <section id='contact' className="flex flex-col  items-center justify-between gap-6 overflow-hidden max-w-7xl mx-auto pt-32 pb-12">
@@ -66,10 +67,7 @@ const Footer = () => {
                                     <MdOutlineMail size={24} />
                                 </Link>
                             </div>
-                            <input type="email" placeholder="Enter email" className="w-full bg-[#1e1e1e] text-[#f0f0f0] rounded-xl py-4 px-6" />
-                            <button className="flex items-center justify-center w-full gap-4 mt-4 bg-[#EAEAEA] text-base text-black font-semibold rounded-full py-[10px] px-[22px] ">
-                                Subscribe Now
-                            </button>
+                            <ContactForm />
                         </div>
                     </div>
                 </div>
